@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Andrey Sinikov](https://up.htmlacademy.ru/adaptive/28/user/2261489).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Бер](https://htmlacademy.ru/profile/id151813).
 
 ---
 
