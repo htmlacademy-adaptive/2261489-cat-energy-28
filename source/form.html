@@ -1,13 +1,75 @@
-  <!DOCTYPE html>
-  <html class="page" lang="ru">
+<!DOCTYPE html>
+<html class="page" lang="ru">
 
-  <head>
-    <meta charset="UTF-8">
-    <title>HTML Academy: Кэт энерджи</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Academy: Кэт энерджи</title>
+</head>
 
-  <body class="page__body">
+<body class="page__body">
+  <header class="main-header">
+    <a class="main-header__logo">
+      <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="37" alt="Логотип Cat Energy.">
+    </a>
+    <a class="main-header__logo-type">
+      <img class="main-header__logo-type-image" src="img/logo-type-mobile.svg" width="101" height="18"
+        alt="Cat Energy.">
+    </a>
+    <nav class="main-navigation">
+      <button class="main-navigation__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <div class="main-navigation__wrapper">
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item main-navigation__item--current">
+            <a href="#">
+              Главная
+            </a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="#">
+              Каталог продукции
+            </a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="#">
+              Подбор программы
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-  </body>
+  <main class="main-container">
+    <section class="program-form">
+      <h1 class="program-form__title">
+        Подбор программы
+      </h1>
+      <p class="program-form__description">
+        Заполните анкету, и мы подберем программу питания для вашего кота
+      </p>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="cat-info">
+          <ul class="cat-info__list">
+            <li class="cat-info__item">
+              <label for="name-field">Имя:*</label>
+              <input type="text" name="name" id="name-field" value="Барсик">
+            </li>
+            <li class="cat-info__item">
+              <label for="weight-field">Вес (кг):*</label>
+              <input type="text" name="weight" id="weight-field" value="7">
+            </li>
+            <li class="cat-info__item">
+              <label for="age-field">Возраст (лет):</label>
+              <input type="text" name="age" id="age-field" value="7">
+            </li>
+          </ul>
+        </fieldset>
 
-  </html>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>
