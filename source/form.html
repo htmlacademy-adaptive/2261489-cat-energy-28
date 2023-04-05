@@ -49,8 +49,8 @@
       <p class="program-form__description">
         Заполните анкету, и мы подберем программу питания для вашего кота
       </p>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="cat-info">
+      <form class="program-selection" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="program-selection__fields cat-info">
           <ul class="cat-info__list">
             <li class="cat-info__item">
               <label for="name-field">Имя:*</label>
@@ -66,7 +66,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="program-goals">
+        <fieldset class="program-selection__fields program-goals">
           <ul class="program-goals__list">
             <li class="program-goals__item">
               <input type="radio" name="program-goal" value="weight-loss" checked>
@@ -82,7 +82,7 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="owner-contacts">
+        <fieldset class="program-selection__fields owner-contacts">
           <h2 class="owner-contacts__title">
             Контактные данные (владельца кота)
           </h2>
@@ -97,13 +97,13 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="about-cat">
+        <fieldset class="program-selection__fields about-cat">
           <h2 class="about-cat__title">
             Комментарий
           </h2>
           <textarea name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset class="extra">
+        <fieldset class="program-selection__fields extra">
           <ul class="extra__list">
             <li class="extra__item">
               <input type="checkbox" name="add" value="sweetener">
