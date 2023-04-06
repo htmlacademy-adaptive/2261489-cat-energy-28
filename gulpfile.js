@@ -28,6 +28,7 @@ const server = (done) => {
     cors: true,
     notify: false,
     ui: false,
+    browser: ['google chrome', 'firefox']
   });
   done();
 }
