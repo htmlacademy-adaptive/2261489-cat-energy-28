@@ -1,20 +1,47 @@
-.program-options {
-  padding: 0 20px 0 20px;
-}
-
 .program-option {
   background: #D9D9D9;
   margin-bottom: 20px;
 }
 
+@media (min-width: @desktop-width) {
+  .program-option {
+    width: 570px;
+  }
+}
+
 .program-option__title {
   .title();
-  line-height: 37px;
+  line-height: 36px;
   padding: 30px 52px 30px 91px;
+}
+
+@media (min-width: @tablet-width) {
+  .program-option__title {
+    font-size: 36px;
+    padding: 77px 449px 24px 53px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-option__title {
+    padding: 77px 150px 73px 214px;
+  }
 }
 
 .program-option__description {
   padding: 0 33px 38px 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .program-option__description {
+    padding: 0 316px 48px 53px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-option__description {
+    padding: 0 60px 23px 52px;
+  }
 }
 
 .program-option__link {
