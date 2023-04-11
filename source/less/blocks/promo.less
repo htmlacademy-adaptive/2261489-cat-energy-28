@@ -1,7 +1,19 @@
 .promo__top-part {
+  position: relative;
   height: 302px;
-  background: url("/img/background-cat.png") @basic-green no-repeat;
+  background: rgba(104, 183, 56, 0.85) no-repeat;
 }
+
+.promo__top-part::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/background-cat.png");
+}
+
 
 .promo__bottom-part {
   margin-bottom: 20px;
@@ -10,10 +22,14 @@
 .promo__title {
   .main-title();
   color: @white;
+  padding: 27px 35px 25px 35px;
+  text-align: center;
 }
 
 .promo__slogan {
+  .title();
   font-size: 14px;
   line-height: 14px;
+  text-align: center;
   color: @white;
 }
