@@ -17,7 +17,7 @@
 
 @media (min-width: @tablet-width) {
   .program-option__title {
-    font-size: 36px;
+    .main-title();
     padding: 77px 449px 24px 53px;
   }
 }
@@ -48,6 +48,19 @@
   color: @black;
   font-size: 16px;
   line-height: 16px;
-  text-transform: uppercase;
   padding: 0 127px 18px 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .program-option__link {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 450px 53px 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .program-option__link {
+    padding: 0 350px 55px 52px;
+  }
 }
