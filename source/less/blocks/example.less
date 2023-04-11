@@ -1,9 +1,33 @@
 .example {
-  background: #D9D9D9;
+  background: @light-gray;
+}
+
+@media (min-width: @tablet-width) {
+  .example {
+    background: @white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example {
+    background: @basic-gray;
+  }
 }
 
 .example__wrapper {
-  padding: 25px 20px 20px 20px;
+  padding: 25px 20px 40px;
+}
+
+@media (min-width: @tablet-width) {
+  .example__wrapper {
+    padding: 43px 30px 110px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    padding: 0 110px 75px;
+  }
 }
 
 .example__title {
@@ -12,14 +36,58 @@
   margin-bottom: 40px;
 }
 
+@media (min-width: @tablet-width) {
+  .example__title {
+    .main-title-big();
+    margin-bottom: 63px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__title {
+    margin-bottom: 76px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .example__stats-wrapper {
+    display: flex;
+    gap: 167px;
+  }
+
+  .example__list {
+    display: flex;
+    gap: 42px;
+  }
+}
+
 .example__number {
   .title();
   line-height: 24px;
 }
 
+@media (min-width: @tablet-width) {
+  .example__number {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
 .example__item {
   border: 1px @dark-gray solid;
   margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .example__item {
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__item {
+    margin-bottom: 55px;
+  }
 }
 
 .example__spent {
