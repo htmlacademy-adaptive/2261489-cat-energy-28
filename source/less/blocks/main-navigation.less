@@ -1,7 +1,33 @@
+.main-navigation__list {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  padding-top: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-navigation__list {
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 440px;
+    min-height: 36px;
+    padding-top: 18px;
+  }
+}
+
+
 .main-navigation__link {
-  color: #000000;
+  .title();
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
-  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .main-navigation__link {
+    .title();
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+  }
 }
