@@ -1,0 +1,20 @@
+.social-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 40px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 55px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 66px 100px;
+  }
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+}
