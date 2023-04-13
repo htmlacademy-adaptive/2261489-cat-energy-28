@@ -1,11 +1,38 @@
-.product-catalog {
+.catalog {
   margin-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
 }
 
 .catalog__title {
   .main-title();
   margin-top: 18px;
   margin-bottom: 75px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 163px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 165px;
+  }
+}
+
+.catalog__list {
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 324px);
+    gap: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    row-gap: 64px;
+  }
 }
 
 .card__title {
