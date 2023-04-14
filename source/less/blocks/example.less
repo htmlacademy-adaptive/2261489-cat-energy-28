@@ -1,31 +1,23 @@
 .example {
   background: @light-gray;
-}
 
-@media (min-width: @tablet-width) {
-  .example {
+  @media (min-width: @tablet-width) {
     background: @white;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .example {
+  @media (min-width: @desktop-width) {
     background: @basic-gray;
   }
 }
 
 .example__wrapper {
   padding: 25px 20px 40px;
-}
 
-@media (min-width: @tablet-width) {
-  .example__wrapper {
+  @media (min-width: @tablet-width) {
     padding: 43px 30px 110px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .example__wrapper {
+  @media (min-width: @desktop-width) {
     box-sizing: border-box;
     width: 436px;
     padding-left: 110px;
@@ -36,17 +28,13 @@
   .main-title();
   line-height: 40px;
   margin-bottom: 40px;
-}
 
-@media (min-width: @tablet-width) {
-  .example__title {
+  @media (min-width: @tablet-width) {
     .main-title-big();
     margin-bottom: 63px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .example__title {
+  @media (min-width: @desktop-width) {
     margin-bottom: 76px;
   }
 }
@@ -61,31 +49,28 @@
   }
 }
 
-@media (min-width: @tablet-width) {
-  .example__stats-wrapper {
+.example__stats-wrapper {
+
+  @media (min-width: @tablet-width) {
     display: flex;
     gap: 167px;
   }
 
   @media (min-width: @desktop-width) {
-    .example__stats-wrapper {
-      display: block
-    }
+    display: block
   }
+}
 
   .example__list {
     display: flex;
     gap: 32px;
   }
-}
 
 .example__number {
   .title();
   line-height: 24px;
-}
 
-@media (min-width: @tablet-width) {
-  .example__number {
+  @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 37px;
   }
@@ -94,16 +79,12 @@
 .example__item {
   border: 1px @dark-gray solid;
   margin-bottom: 20px;
-}
 
-@media (min-width: @tablet-width) {
-  .example__item {
+  @media (min-width: @tablet-width) {
     margin-bottom: 100px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .example__item {
+  @media (min-width: @desktop-width) {
     margin-bottom: 55px;
   }
 }

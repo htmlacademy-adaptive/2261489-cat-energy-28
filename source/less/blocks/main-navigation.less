@@ -3,10 +3,8 @@
   flex-direction: column;
   min-width: 280px;
   padding-top: 24px;
-}
 
-@media (min-width: @tablet-width) {
-  .main-navigation__list {
+  @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     min-width: 440px;
@@ -15,16 +13,13 @@
   }
 }
 
-
 .main-navigation__link {
   .title();
   font-size: 20px;
   line-height: 20px;
   font-weight: 500;
-}
 
-@media (min-width: @tablet-width) {
-  .main-navigation__link {
+  @media (min-width: @tablet-width) {
     .title();
     font-size: 18px;
     line-height: 24px;
