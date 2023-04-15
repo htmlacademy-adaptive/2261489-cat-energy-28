@@ -55,8 +55,37 @@
 
 .program-form__button {
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+    height: 52px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    height: 52px;
+  }
 }
 
 .program-form__asterisk {
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.program-form-button-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 84px;
+    margin-bottom: 82px;
+  }
 }
