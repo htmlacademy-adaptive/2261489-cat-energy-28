@@ -1,9 +1,35 @@
 .owner-contacts__title {
   .title();
-  padding-top: 26px;
   margin-bottom: 35px;
+
+  @media (min-width: @desktop-width) {
+    .main-title();
+    margin-bottom: 76px;
+  }
+}
+
+.owner-contacts__list {
+
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 569px);
+    column-gap: 80px;
+  }
 }
 
 .owner-contacts__item {
   margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 67px;
+  }
 }

@@ -58,38 +58,40 @@
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
         <form class="program-selection" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="program-selection__fields cat-info">
-            <ul class="cat-info__list">
-              <li class="cat-info__item">
-                <label for="name-field">Имя:*</label>
-                <input type="text" name="name" id="name-field" placeholder="Барсик">
-              </li>
-              <li class="cat-info__item">
-                <label for="weight-field">Вес (кг):*</label>
-                <input type="text" name="weight" id="weight-field" placeholder="7">
-              </li>
-              <li class="cat-info__item">
-                <label for="age-field">Возраст (лет):</label>
-                <input type="text" name="age" id="age-field" placeholder="7">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="program-selection__fields program-goals">
-            <ul class="program-goals__list">
-              <li class="program-goals__item">
-                <input type="radio" name="program-goal" value="weight-loss" checked>
-                <span class="program-goal__label">Похудение</span>
-              </li>
-              <li class="program-goals__item">
-                <input type="radio" name="program-goal" value="weight-gain">
-                <span class="program-goal__label">Набор массы</span>
-              </li>
-              <li class="program-goals__item">
-                <input type="radio" name="program-goal" value="need-advice">
-                <span class="program-goal__label">Не знаю (нужен ваш совет)</span>
-              </li>
-            </ul>
-          </fieldset>
+          <div class="program-selection-wrapper">
+            <fieldset class="program-selection__fields cat-info">
+              <ul class="cat-info__list">
+                <li class="cat-info__item">
+                  <label for="name-field">Имя:*</label>
+                  <input type="text" name="name" id="name-field" placeholder="Барсик">
+                </li>
+                <li class="cat-info__item">
+                  <label for="weight-field">Вес (кг):*</label>
+                  <input type="text" name="weight" id="weight-field" placeholder="7">
+                </li>
+                <li class="cat-info__item">
+                  <label for="age-field">Возраст (лет):</label>
+                  <input type="text" name="age" id="age-field" placeholder="7">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="program-selection__fields program-goals">
+              <ul class="program-goals__list">
+                <li class="program-goals__item">
+                  <input type="radio" name="program-goal" value="weight-loss" checked>
+                  <span class="program-goal__label">Похудение</span>
+                </li>
+                <li class="program-goals__item">
+                  <input type="radio" name="program-goal" value="weight-gain">
+                  <span class="program-goal__label">Набор массы</span>
+                </li>
+                <li class="program-goals__item">
+                  <input type="radio" name="program-goal" value="need-advice">
+                  <span class="program-goal__label">Не знаю (нужен ваш совет)</span>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
           <fieldset class="program-selection__fields owner-contacts">
             <h2 class="owner-contacts__title title">
               Контактные данные (владельца кота)
@@ -156,37 +158,39 @@
           </p>
         </div>
         <!-- сюда вставим карту-->
-        <a class="main-footer__logo-type">
-          <img class="main-footer__logo-type-image" src="img/logo-type-mobile.svg" width="101" height="18"
-            alt="Cat Energy.">
-        </a>
-        <div class="main-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
-                Наш ВК
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--youtube"
-                href="https://www.youtube.com/channel/UChUxTMjJGo-JDRY8pNTGL2g">
-                Наш Youtube
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-                Наш Telegram
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="main-footer__copyright copyright">
-          <p class="copyright__text">
-            HTML Academy
-          </p>
-          <a class="copyright__link" href="https://up.htmlacademy.ru/profession/frontender/16/adaptive/28">
-            Ссылка на курс HTML Academy
+        <div class="social-wrapper">
+          <a class="main-footer__logo-type">
+            <img class="main-footer__logo-type-image" src="img/logo-type-mobile.svg" width="101" height="18"
+              alt="Cat Energy.">
           </a>
+          <div class="main-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+                  Наш ВК
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--youtube"
+                  href="https://www.youtube.com/channel/UChUxTMjJGo-JDRY8pNTGL2g">
+                  Наш Youtube
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+                  Наш Telegram
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="main-footer__copyright copyright">
+            <p class="copyright__text">
+              HTML Academy
+            </p>
+            <a class="copyright__link" href="https://up.htmlacademy.ru/profession/frontender/16/adaptive/28">
+              Ссылка на курс HTML Academy
+            </a>
+          </div>
         </div>
       </div>
     </footer>
