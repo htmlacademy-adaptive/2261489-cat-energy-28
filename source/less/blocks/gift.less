@@ -1,6 +1,6 @@
 .gift {
-  height: 289px;
-  background: url("/img/gift-cat.png") @basic-green no-repeat;
+  min-height: 289px;
+  background: @basic-green no-repeat;
 }
 
 .gift-wrapper {
@@ -8,8 +8,18 @@
 }
 
 .gift__title {
-  .title();
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   color: @white;
+
+  @media (min-width: @tablet-width) {
+    min-height: 60px;
+    padding: 70px 124px 69px 422px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 184px 40px 40px 40px;
+    text-align: center;
+  }
 }
