@@ -1,4 +1,27 @@
+.about-cat {
+
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 67px;
+  }
+}
+
 .about-cat__title {
   .title();
   margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    .main-title();
+    margin-bottom: 76px;
+  }
+}
+
+.about-cat textarea {
+  @media (min-width: @tablet-width) {
+    padding: 10px 19px;
+  }
 }
