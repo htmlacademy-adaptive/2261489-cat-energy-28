@@ -1,15 +1,51 @@
+.program-form__wrapper {
+
+  @media (min-width: @tablet-width) {
+    padding: 0 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
+}
+
+.program-selection-wrapper {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 569px);
+    column-gap: 80px;
+  }
+}
+
 .program-form__title {
-  .title();
-  font-size: 36px;
-  line-height: 36px;
+  .main-title();
   margin-top: 27px;
   margin-bottom: 37px;
+
+  @media (min-width: @tablet-width) {
+    .main-title-big();
+    margin-top: 65px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 73px;
+    margin-bottom: 56px;
+  }
 }
 
 .program-form__description {
   margin: 0;
   margin-bottom: 39px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    width: 323px;
+    .title();
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 66px;
+  }
 }
 
 .program-selection__fields {
@@ -17,63 +53,39 @@
   border-bottom: 1px solid @light-gray;
 }
 
-.cat-info__item {
-  margin-bottom: 14px;
-}
-
-.program-goals__list {
-  padding-top: 23px;
-  padding-bottom: 19px;
-}
-
-.program-goal__label {
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  color: @darker-gray;
-}
-
-.owner-contacts__title {
-  .title();
-  font-size: 24px;
-  line-height: 26px;
-  padding-top: 26px;
-  margin-bottom: 35px;
-}
-
-.owner-contacts__item {
-  margin-bottom: 14px;
-}
-
-.about-cat__title {
-  .title();
-  font-size: 24px;
-  line-height: 26px;
-  margin-bottom: 37px;
-}
-
-.extra__title {
-  .title();
-  font-size: 24px;
-  line-height: 26px;
-  margin-bottom: 34px;
-}
-
-.extra__item:last-child {
-  margin-bottom: 34px;
-}
-
-.extra__label {
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 18px;
-  color: @darker-gray;
-}
-
 .program-form__button {
   margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+    height: 52px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    height: 52px;
+  }
 }
 
 .program-form__asterisk {
   margin-bottom: 32px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.program-form-button-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    gap: 64px;
+    align-items: center;
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 84px;
+    margin-bottom: 82px;
+  }
 }

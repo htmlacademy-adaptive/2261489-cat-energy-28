@@ -1,25 +1,129 @@
-.additional__title {
-  .title();
-  font-size: 16px;
-  line-height: 16px;
+.additionals {
+
+
+  @media (min-width: @tablet-width) {
+  }
+
+  @media (min-width: @desktop-width) {
+  }
+  }
+
+.additionals-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    gap: 80px;
+  }
 }
 
 .additionals__title {
   .title();
-  font-size: 24px;
   line-height: 24px;
   margin-bottom: 50px;
+
+  @media (min-width: @tablet-width) {
+    .main-title();
+    margin-bottom: 80px;
+    padding: 0 30px;
+  }
+
+
+}
+
+.additionals__list {
+
+  @media (min-width: @tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
 }
 
 .additional__title {
   .title();
   color: @darker-gray;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
 }
 
-.additionals__item {
+.additional {
   margin-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 325px 325px 245px;
+    margin: 0;
+    min-height: 70px;
+    align-items: center;
+
+  }
+
 }
 
-.additionals__item:last-child {
+.additional:last-child {
   margin-bottom: 55px;
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 85px;
+  }
+}
+
+.additional__content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.additional__value {
+  margin-left: 50px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 40px;
+  }
+}
+
+.order-button {
+  width: 100%;
+  margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 16px;
+    padding: 7px 26px;
+    margin: 0;
+  }
 }
