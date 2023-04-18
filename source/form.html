@@ -58,7 +58,7 @@
           Заполните анкету, и мы подберем программу питания для вашего кота
         </p>
         <form class="program-selection" action="https://echo.htmlacademy.ru" method="post">
-          <div class="program-selection-wrapper">
+          <div class="program-selection-wrapper wrapper">
             <fieldset class="program-selection__fields cat-info">
               <ul class="cat-info__list">
                 <li class="cat-info__item">
@@ -93,50 +93,56 @@
             </fieldset>
           </div>
           <fieldset class="program-selection__fields owner-contacts">
-            <h2 class="owner-contacts__title title">
-              Контактные данные (владельца кота)
-            </h2>
-            <ul class="owner-contacts__list">
-              <li class="owner-contacts__item">
-                <label for="email-field">E-mail:*</label>
-                <input type="email" name="email" id="email-field" placeholder="kuklachev@gmail.com">
-              </li>
-              <li class="owner-contacts__item">
-                <label for="email-field">Телефон:*</label>
-                <input type="tel" name="tel" id="tel-field" placeholder="8 (960) 900-60-90">
-              </li>
-            </ul>
+            <div class="wrapper">
+              <h2 class="owner-contacts__title title">
+                Контактные данные (владельца кота)
+              </h2>
+              <ul class="owner-contacts__list">
+                <li class="owner-contacts__item">
+                  <label for="email-field">E-mail:*</label>
+                  <input type="email" name="email" id="email-field" placeholder="kuklachev@gmail.com">
+                </li>
+                <li class="owner-contacts__item">
+                  <label for="email-field">Телефон:*</label>
+                  <input type="tel" name="tel" id="tel-field" placeholder="8 (960) 900-60-90">
+                </li>
+              </ul>
+            </div>
           </fieldset>
           <fieldset class="program-selection__fields about-cat">
-            <h2 class="about-cat__title title">
-              Комментарий
-            </h2>
-            <textarea name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <div class="wrapper">
+              <h2 class="about-cat__title title">
+                Комментарий
+              </h2>
+              <textarea name="comment" rows="7" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
           </fieldset>
           <fieldset class="program-selection__fields extra">
-            <h2 class="extra__title title">
-              Дополнительно
-            </h2>
-            <ul class="extra__list">
-              <li class="extra__item">
-                <input type="checkbox" name="add" value="sweetener">
-                <span class="extra__label">Cахарозаменитель</span>
-              </li>
-              <li class="extra__item">
-                <input type="checkbox" name="add" value="water">
-                <span class="extra__label">Питьевая вода</span>
-              </li>
-              <li class="extra__item">
-                <input type="checkbox" name="add" value="milk">
-                <span class="extra__label">Молоко</span>
-              </li>
-              <li class="extra__item">
-                <input type="checkbox" name="add" value="vitamins">
-                <span class="extra__label">Витамины</span>
-              </li>
-            </ul>
+            <div class="wrapper">
+              <h2 class="extra__title title">
+                Дополнительно
+              </h2>
+              <ul class="extra__list">
+                <li class="extra__item">
+                  <input type="checkbox" name="add" value="sweetener">
+                  <span class="extra__label">Cахарозаменитель</span>
+                </li>
+                <li class="extra__item">
+                  <input type="checkbox" name="add" value="water">
+                  <span class="extra__label">Питьевая вода</span>
+                </li>
+                <li class="extra__item">
+                  <input type="checkbox" name="add" value="milk">
+                  <span class="extra__label">Молоко</span>
+                </li>
+                <li class="extra__item">
+                  <input type="checkbox" name="add" value="vitamins">
+                  <span class="extra__label">Витамины</span>
+                </li>
+              </ul>
+            </div>
           </fieldset>
-          <div class="program-form-button-wrapper">
+          <div class="program-form-button-wrapper wrapper">
             <button class="program-form__button button">
               Отправить заявку
             </button>
@@ -149,7 +155,7 @@
     </main>
 
     <footer class="main-footer">
-      <div class="main-footer__wrapper">
+      <div class="main-footer__wrapper wrapper">
         <div class="main-footer__contacts contacts">
           <h3 class="contacts__title title">
             Приглашаем к сотрудничеству дилеров!
