@@ -10,7 +10,13 @@
   }
 }
 
-.example__wrapper {
+.example-main-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
+.example-wrapper {
 
 
   @media (min-width: @tablet-width) {
@@ -18,9 +24,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: relative;
     box-sizing: border-box;
-    width: 436px;
-
+    width: 434px;
+    padding: 70px 0 75px;
   }
 }
 
@@ -35,7 +42,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 76px;
+    position: absolute;
+    top: -156px;
   }
 }
 
