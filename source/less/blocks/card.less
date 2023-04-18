@@ -1,4 +1,6 @@
 .card {
+  display: flex;
+  flex-direction: column;
   width: 280px;
   padding: 0 20px;
   margin-bottom: 33px;
@@ -14,6 +16,10 @@
   @media (min-width: @desktop-width) {
     width: 245px;
   }
+}
+
+.card-wrapper {
+  display: flex;
 }
 
 .card:last-child {
