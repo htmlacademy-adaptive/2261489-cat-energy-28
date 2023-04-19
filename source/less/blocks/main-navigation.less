@@ -48,9 +48,6 @@
 
 .main-navigation--opened .main-navigation__toggle {
 
-
-
-
   &:before,
   &:after {
     content: "";
@@ -70,3 +67,19 @@
     transform: rotate(-45deg);
   }
 }
+
+.main-navigation--closed .main-navigation__toggle {
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: @black;
+    box-shadow: 0 8px 0 0 @black, 0 16px 0 0 @black;
+  }
+}
+
