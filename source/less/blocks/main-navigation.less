@@ -12,11 +12,14 @@
   }
 }
 
+
 .main-navigation__item {
-  width: 100vw;
-  text-align: center;
-  padding: 22px 20px 24px;
-  border-top: 1px solid @third-gray;
+  @media (max-width: @mobile-only-width) {
+    width: 100vw;
+    text-align: center;
+    padding: 22px 20px 24px;
+    border-top: 1px solid @third-gray;
+  }
 }
 
 .main-navigation__link {
@@ -44,6 +47,10 @@
   background-color: @white;
   cursor: pointer;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .main-navigation--opened .main-navigation__toggle {
