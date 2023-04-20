@@ -45,7 +45,7 @@
 
   @media (min-width: @tablet-width) {
     .main-title-big();
-    padding: 62px 187px 41px 90px;
+    padding: 62px 187px 41px 120px;
     text-align: left;
   }
 
@@ -65,7 +65,7 @@
     font-size: 20px;
     line-height: 20px;
     color: @black;
-    padding: 0 0 0 90px;
+    padding: 0 0 0 120px;
     text-align: left;
   }
 
@@ -77,10 +77,21 @@
 .promo__image {
   position: relative;
   top: -135px;
+
+  @media (min-width: @tablet-width) {
+    top: -41px;
+    left: 30px;
+  }
 }
 
 .promo__button {
   position: relative;
   top: 302px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    top: 50px;
+    margin-left: 120px;
+    z-index: 1;
+  }
 }
