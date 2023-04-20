@@ -1,5 +1,9 @@
 .contacts {
   background: @white;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
 }
 
 .contacts-wrapper {
@@ -13,7 +17,14 @@
   }
 
   @media (min-width: @desktop-width) {
-
+    width: 565px;
+    height: 198px;
+    gap: 0;
+    padding: 56px 60px 56px 80px;
+    position: absolute;
+    background-color: @white;
+    top: 95px;
+    left: 110px;
   }
 }
 
