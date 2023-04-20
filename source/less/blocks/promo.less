@@ -39,7 +39,23 @@
   margin-bottom: -76px;
 
   @media (min-width: @desktop-width) {
+    position: relative;
+    height: 694px;
+    top: -110px;
     background: url(../img/background-cat.png) no-repeat;
+    background-size: cover;
+  }
+}
+
+.promo-image-part::after {
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(104, 183, 56, 0.85) no-repeat;
   }
 }
 
@@ -98,8 +114,9 @@
   @media (min-width: @desktop-width) {
     width: 552px;
     height: 499px;
-    top: 0;
+    top: 140px;
     left: -150px;
+    z-index: 1;
   }
 }
 

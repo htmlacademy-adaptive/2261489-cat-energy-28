@@ -10,6 +10,10 @@
     min-height: 36px;
     padding-top: 18px;
   }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
 }
 
 
@@ -19,6 +23,12 @@
     text-align: center;
     padding: 22px 20px 24px;
     border-top: 1px solid @third-gray;
+  }
+
+
+
+  @media (min-width: @desktop-width) {
+    z-index: 1;
   }
 }
 
@@ -34,6 +44,10 @@
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: @white;
   }
 }
 
