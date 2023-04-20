@@ -1,10 +1,53 @@
 .program-option {
+  position: relative;
   background: #D9D9D9;
   margin-bottom: 20px;
 
   @media (min-width: @desktop-width) {
     width: 570px;
   }
+}
+
+.program-option--slim::before {
+  position: absolute;
+  content: "";
+  top: 24px;
+  left: 22px;
+  width: 50px;
+  height: 50px;
+  background: @basic-green no-repeat;
+  border-radius: 50%;
+}
+
+.program-option--slim::after {
+  position: absolute;
+  content: "";
+  top: 21px;
+  left: 29px;
+  width: 36px;
+  height: 50px;
+  background: url("../img/cat-slim.png") no-repeat;
+}
+
+.program-option--pro::before {
+  position: absolute;
+  content: "";
+  top: 24px;
+  left: 22px;
+  width: 50px;
+  height: 50px;
+  background: @basic-green no-repeat;
+  border-radius: 50%;
+}
+
+.program-option--pro::after {
+  position: absolute;
+  content: "";
+  top: 35px;
+  left: 13px;
+  width: 67px;
+  height: 28px;
+  background: url("../img/cat-pro.png") no-repeat;
 }
 
 .program-option__title {
