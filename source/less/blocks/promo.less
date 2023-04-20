@@ -11,7 +11,7 @@
 .promo-info-part {
   position: relative;
   height: 302px;
-  background: rgba(104, 183, 56, 0.85) no-repeat;
+  background: url(../img/background-cat.png) no-repeat;
 
   @media (min-width: @tablet-width) {
     background: @white;
@@ -23,13 +23,15 @@
 }
 
 .promo-info-part::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /*background-image: url("../img/background-cat.png");*/
+  @media (max-width: @mobile-only-width) {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(104, 183, 56, 0.85) no-repeat;
+  }
 }
 
 
@@ -37,11 +39,13 @@
   margin-bottom: -76px;
 
   @media (min-width: @desktop-width) {
-    background: rgba(104, 183, 56, 0.85) no-repeat;
+    background: url(../img/background-cat.png) no-repeat;
   }
 }
 
 .promo__title {
+  position: relative;
+  z-index: 1;
   .main-title();
   color: @white;
   padding: 27px 35px 25px 35px;
@@ -59,6 +63,8 @@
 }
 
 .promo__slogan {
+  position: relative;
+  z-index: 1;
   .title();
   font-size: 14px;
   line-height: 14px;
