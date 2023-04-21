@@ -15,7 +15,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 135px;
+    column-gap: 153px;
   }
 
   @media (min-width: @desktop-width) {
@@ -40,6 +40,7 @@
 }
 
 .features__item {
+  position: relative;
   margin-bottom: 20px;
   padding-left: 80px;
 
@@ -50,5 +51,133 @@
 
   @media (min-width: @desktop-width) {
     width: 250px;
+  }
+}
+
+.features__item--icon-leaf::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: @basic-green no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.features__item--icon-leaf::after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  left: 15px;
+  width: 30px;
+  height: 32px;
+  background: url("../img/leaf-icon.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 35px;
+    left: 34px;
+  }
+}
+
+.features__item--icon-powder::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: @basic-green no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.features__item--icon-powder::after {
+  position: absolute;
+  content: "";
+  top: 16px;
+  left: 17px;
+  width: 26px;
+  height: 28px;
+  background: url("../img/powder-icon.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 36px;
+    left: 37px;
+  }
+}
+
+.features__item--icon-eat::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: @basic-green no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.features__item--icon-eat::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 17px;
+  width: 25px;
+  height: 30px;
+  background: url("../img/eat-icon.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 35px;
+    left: 37px;
+  }
+}
+
+.features__item--icon-time::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  background: @basic-green no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.features__item--icon-time::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 17px;
+  width: 26px;
+  height: 31px;
+  background: url("../img/time-icon.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 35px;
+    left: 37px;
   }
 }
