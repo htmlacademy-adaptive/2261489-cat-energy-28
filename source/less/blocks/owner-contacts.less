@@ -58,11 +58,11 @@
 }
 
 .owner-contacts__item {
+  display: flex;
+  align-items: center;
   margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    align-items: center;
     margin-bottom: 65px;
   }
 
@@ -71,4 +71,18 @@
     align-items: center;
     margin-bottom: 67px;
   }
+}
+
+.email-field {
+  background-image: url("../img/email-icon.svg");
+  background-repeat: no-repeat;
+  background-position: top 13px right 15px;
+  background-size: 20px 20px;
+}
+
+.tel-field {
+  background-image: url("../img/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: top 13px right 15px;
+  background-size: 20px 20px;
 }
