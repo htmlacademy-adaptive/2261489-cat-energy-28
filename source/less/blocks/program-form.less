@@ -1,3 +1,11 @@
+.program-form {
+  border-top: 1px solid @light-gray;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
 .program-form__wrapper {
 
   @media (min-width: @tablet-width) {
@@ -51,9 +59,15 @@
 .program-selection__fields {
   border: none;
   border-bottom: 1px solid @light-gray;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .program-form__button {
+  font-size: 16px;
+  line-height: 20px;
   margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
@@ -70,6 +84,7 @@
 
 .program-form__asterisk {
   margin-bottom: 32px;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;

@@ -1,5 +1,7 @@
 .about-cat {
-
+  position: relative;
+  margin-bottom: 23px;
+  border-bottom: none;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 65px;
@@ -17,6 +19,39 @@
   @media (min-width: @tablet-width) {
     .main-title();
     margin-bottom: 76px;
+  }
+}
+
+.about-cat__title::before {
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: -70px;
+    width: 30px;
+    height: 2px;
+    background: @basic-green;
+  }
+}
+
+.about-cat__title::after {
+  position: absolute;
+  content: "";
+  top: 13px;
+  left: 152px;
+  min-width: 158px;
+  height: 2px;
+  background: @basic-green;
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: 230px;
+    min-width: 500px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1100px;
   }
 }
 

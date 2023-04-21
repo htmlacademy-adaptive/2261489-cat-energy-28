@@ -20,10 +20,7 @@
             alt="Cat Energy.">
         </a>
       </div>
-      <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+      <nav class="main-navigation main-navigation--closed main-navigation--nojs">
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
@@ -31,13 +28,13 @@
                 Главная
               </a>
             </li>
-            <li class="main-navigation__item main-navigation__item--current">
+            <li class="main-navigation__item">
               <a class="main-navigation__link" href="catalog.html">
                 Каталог продукции
               </a>
             </li>
             <li class="main-navigation__item">
-              <a class="main-navigation__link" href="#">
+              <a class="main-navigation__link main-navigation__link--current" href="#">
                 Подбор программы
               </a>
             </li>
@@ -59,7 +56,7 @@
             Заполните анкету, и мы подберем программу питания для вашего кота
           </p>
           <form class="program-selection" action="https://echo.htmlacademy.ru" method="post">
-            <div class="program-selection-wrapper wrapper">
+            <div class="program-selection-wrapper">
               <fieldset class="program-selection__fields cat-info">
                 <ul class="cat-info__list">
                   <li class="cat-info__item">
@@ -163,7 +160,7 @@
             </p>
           </div>
         </div>
-        <!-- сюда вставим карту-->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5652.9283698546205!2d30.316628495277!3d59.93858034685543!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1682016105424!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" title="Офис компании СatEnergy, ул. Большая Конюшенная, д. 19/8, Санкт-Петербург" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="social-wrapper wrapper">
           <a class="main-footer__logo-type">
             <img class="main-footer__logo-type-image" src="img/logo-type-mobile.svg" width="101" height="18"
@@ -205,6 +202,7 @@
     </footer>
 
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>

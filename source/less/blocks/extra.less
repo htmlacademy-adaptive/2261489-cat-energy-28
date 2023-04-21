@@ -1,3 +1,8 @@
+.extra {
+  position: relative;
+}
+
+
 .extra__list {
 
 
@@ -15,6 +20,8 @@
 }
 
 .extra__item {
+  margin-bottom: 13px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 32px;
   }
@@ -31,6 +38,39 @@
   @media (min-width: @tablet-width) {
     .main-title();
     margin-bottom: 57px;
+  }
+}
+
+.extra__title::before {
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    top: 18px;
+    left: -70px;
+    width: 30px;
+    height: 2px;
+    background: @basic-green;
+  }
+}
+
+.extra__title::after {
+  position: absolute;
+  content: "";
+  top: 13px;
+  left: 163px;
+  min-width: 158px;
+  height: 2px;
+  background: @basic-green;
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: 250px;
+    min-width: 500px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1100px;
   }
 }
 
