@@ -1,16 +1,57 @@
 .gift {
-  background: @basic-green no-repeat;
+  position: relative;
+  background: url("../img/gift-cat.png") no-repeat;
+  height: 289px;
+
+  @media (min-width: @tablet-width) {
+    height: 200px;
+    background-size: cover;
+    background-position-y: -320px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 245px;
     height: 298px;
+    background-position: -30px;
   }
+}
+
+.gift::before {
+  position: absolute;
+  content: "";
+  top: 59px;
+  left: 101px;
+  width: 78px;
+  height: 80px;
+  background: url("../img/gift-icon.svg") no-repeat;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    top: 57px;
+    left: 77px;
+    width: 80px;
+    height: 82px;
+  }
+}
+
+.gift::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(104, 183, 56, 0.85) no-repeat;
 }
 
 .gift-wrapper {
 }
 
 .gift__title {
+  position: relative;
+  z-index: 1;
+  padding: 185px 60px 43px;
+  text-align: center;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -19,6 +60,7 @@
   @media (min-width: @tablet-width) {
     min-height: 60px;
     padding: 70px 124px 69px 422px;
+    text-align-last: left;
   }
 
   @media (min-width: @desktop-width) {
