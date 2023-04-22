@@ -1,6 +1,6 @@
 .program-option {
   position: relative;
-  background: #D9D9D9;
+  background: @basic-gray;
   margin-bottom: 20px;
 
   @media (min-width: @desktop-width) {
@@ -126,6 +126,7 @@
 }
 
 .program-option__description {
+  position: relative;
   padding: 0 33px 38px 20px;
 
   @media (min-width: @tablet-width) {
@@ -137,7 +138,20 @@
   }
 }
 
+.program-option__description::after {
+  @media (max-width: @mobile-only-width) {
+    position: absolute;
+    content: "";
+    bottom: 15px;
+    left: 20px;
+    width: 85%;
+    height: 1px;
+    background: @light-gray;
+  }
+}
+
 .program-option__link {
+  position: relative;
   color: @black;
   font-size: 16px;
   line-height: 16px;
@@ -151,5 +165,22 @@
 
   @media (min-width: @desktop-width) {
     padding: 0 350px 55px 52px;
+  }
+}
+
+.program-option__link::after {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: 140px;
+  width: 24px;
+  height: 12px;
+  background: url("../img/arrow-icon.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 10px;
+    left: 205px;
+    width: 32px;
+    height: 10px;
   }
 }
