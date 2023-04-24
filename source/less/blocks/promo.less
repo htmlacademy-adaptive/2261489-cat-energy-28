@@ -1,20 +1,26 @@
 .promo-wrapper {
   padding: 0;
 
+  @media (min-width: @tablet-width) {
+    min-height: 872px;
+  }
+
 
   @media (min-width: @desktop-width) {
     display: flex;
-    margin-bottom: 182px;
+    min-height: 585px;
+    margin-bottom: 82px;
   }
 }
 
 .promo-info-part {
   position: relative;
-  height: 302px;
+  min-height: 302px;
   background: url("../img/background-cat.png") no-repeat;
 
   @media (min-width: @tablet-width) {
     background: @white;
+    padding: 62px 237px 0 80px;
   }
 
   @media (min-width: @tablet-width) {
@@ -36,14 +42,16 @@
 
 
 .promo-image-part {
-  margin-bottom: -76px;
+  position: relative;
+  min-height: 178px;
 
   @media (min-width: @desktop-width) {
     position: relative;
-    height: 694px;
+    min-height: 694px;
     top: -110px;
-    background: url("../img/background-cat.png") no-repeat;
+    background: url("../img/background-cat-desktop.png") no-repeat;
     background-size: cover;
+    min-width: 720px;
   }
 }
 
@@ -69,12 +77,12 @@
 
   @media (min-width: @tablet-width) {
     .main-title-big();
-    padding: 62px 187px 41px 120px;
+    padding: 0;
+    margin-bottom: 40px;
     text-align: left;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 111px 30px 40px 80px;
   }
 }
 
@@ -84,6 +92,7 @@
   .title();
   font-size: 14px;
   line-height: 14px;
+  text-transform: uppercase;
   text-align: center;
   color: @white;
 
@@ -91,17 +100,15 @@
     font-size: 20px;
     line-height: 20px;
     color: @black;
-    padding: 0 0 0 120px;
     text-align: left;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 80px;
   }
 }
 
 .promo__image {
-  position: relative;
+  position: absolute;
   top: -135px;
 
   @media (min-width: @tablet-width) {
@@ -127,12 +134,11 @@
 
   @media (min-width: @tablet-width) {
     top: 50px;
-    margin-left: 120px;
+    margin: 0;
     z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
     top: 52px;
-    margin-left: 80px;
   }
 }
