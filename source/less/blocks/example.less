@@ -6,13 +6,15 @@
   }
 
   @media (min-width: @desktop-width) {
-    background: @basic-gray;
+    background: rgb(242,242,242);
+    background: linear-gradient(0deg, rgba(242,242,242,1) 77%, rgba(255,255,255,1) 77%);
   }
 }
 
 .example-main-wrapper {
   @media (min-width: @desktop-width) {
     display: flex;
+    padding-bottom: 75px;
   }
 }
 
@@ -27,7 +29,7 @@
     position: relative;
     box-sizing: border-box;
     width: 434px;
-    padding: 70px 0 75px;
+    padding: 0;
   }
 }
 
@@ -44,8 +46,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
-    top: -156px;
+    margin-bottom: 146px;
+    margin-top: 0;
   }
 }
 
