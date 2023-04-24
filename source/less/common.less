@@ -130,10 +130,15 @@ input {
 }
 
 iframe {
-  width: 100%;
+  width: 320px;
   height: 362px;
 
   @media (min-width: @tablet-width) {
+    width: 768px;
     height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1280px;
   }
 }
