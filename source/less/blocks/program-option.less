@@ -8,7 +8,11 @@
   }
 }
 
-.program-option--slim::before {
+.program-option__header {
+  position: relative;
+}
+
+.program-option__header::before {
   position: absolute;
   content: "";
   top: 24px;
@@ -33,7 +37,8 @@
   }
 }
 
-.program-option--slim::after {
+
+.program-option__header::after {
   position: absolute;
   content: "";
   top: 21px;
@@ -55,38 +60,10 @@
     left: 67px;
     width: 70px;
     height: 97px;
-    background-size: contain;
   }
 }
 
-.program-option--pro::before {
-  position: absolute;
-  content: "";
-  top: 24px;
-  left: 22px;
-  width: 50px;
-  height: 50px;
-  background: @basic-green no-repeat;
-  border-radius: 50%;
-
-  @media (min-width: @tablet-width) {
-    top: 92px;
-    left: 446px;
-    width: 200px;
-    height: 200px;
-  }
-
-  @media (min-width: @desktop-width) {
-    top: 47px;
-    left: 52px;
-    width: 100px;
-    height: 100px;
-  }
-}
-
-.program-option--pro::after {
-  position: absolute;
-  content: "";
+.program-option__header-pro::after {
   top: 35px;
   left: 13px;
   width: 67px;
@@ -106,7 +83,6 @@
     left: 33px;
     width: 134px;
     height: 56px;
-    background-size: contain;
   }
 }
 
