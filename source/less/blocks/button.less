@@ -11,6 +11,13 @@
   padding: 7px 44px;
   cursor: pointer;
 
+  @media (min-width: @tablet-width) {
+    width: 244px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 14px 26px;
+  }
+
   &:hover {
     background-color: @second-green;
   }
@@ -18,18 +25,15 @@
    &:active {
     color: rgba(255, 255, 255, 0.3);
   }
-
-  @media (min-width: @tablet-width) {
-    width: 244px;
-    font-size: 20px;
-    line-height: 20px;
-    padding: 14px 26px;
-  }
 }
 
 .button--secondary {
   background-color: @basic-gray;
   color: @dark-gray;
+
+  @media (min-width: @tablet-width) {
+    width: 168px;
+  }
 
   &:hover {
     background-color: #EBEBEB;
@@ -37,9 +41,5 @@
 
   &:active {
     color: rgba(68, 68, 68, 0.3);
-  }
-
-  @media (min-width: @tablet-width) {
-    width: 168px;
   }
 }
