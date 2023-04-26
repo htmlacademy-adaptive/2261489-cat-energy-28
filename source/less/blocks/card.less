@@ -69,6 +69,18 @@
   }
 }
 
+.card:last-of-type::after {
+  @media (max-width: @mobile-only-width) {
+    position: absolute;
+    content: "";
+    top: ;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    background: @light-gray;
+  }
+}
+
 .card__image {
   display: block;
   margin: auto;
