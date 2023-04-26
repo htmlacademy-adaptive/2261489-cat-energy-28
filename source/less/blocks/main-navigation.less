@@ -98,6 +98,16 @@
   }
 }
 
+.main-navigation--opened {
+  @mobile-only-width {
+    position: absolute;
+    background: @white;
+    z-index: 2;
+    top: 65px;
+    left: 0;
+  }
+}
+
 .main-navigation--opened .main-navigation__toggle {
 
   &:before,

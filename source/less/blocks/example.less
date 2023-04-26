@@ -96,10 +96,7 @@
 .example__item {
   display: flex;
   flex-direction: column;
-  gap: 7px;
   width: 124px;
-  border: 1px @dark-gray solid;
-  padding-top: 15px;
 
   @media (min-width: @tablet-width) {
     width: 162px;
@@ -112,20 +109,34 @@
   .title();
   line-height: 24px;
   text-align: center;
+  border: 1px @dark-gray solid;
+  padding: 15px 20px 17px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 37px;
+    padding: 15px 20px 20px;
   }
 }
 
 .example__description {
-  margin: 0;
+  width: 77px;
+  margin: -13px auto 0;
   text-align: center;
   font-size: 12px;
+  text-transform: lowercase;
+  background-color: @light-gray;
 
   @media (min-width: @tablet-width) {
+    width: 125px;
+    margin: -22px auto 0;
     font-size: 14px;
+    background-color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: -26px auto 0;
+    background-color: @basic-gray;
   }
 }
 
