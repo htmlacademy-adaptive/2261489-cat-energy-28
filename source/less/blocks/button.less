@@ -16,7 +16,6 @@
   }
 
    &:active {
-    background-color: @second-green;
     color: rgba(255, 255, 255, 0.3);
   }
 
@@ -31,6 +30,14 @@
 .button--secondary {
   background-color: @basic-gray;
   color: @dark-gray;
+
+  &:hover {
+    background-color: #EBEBEB;
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     width: 168px;
