@@ -122,10 +122,27 @@ input {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 18px;
+  border: 1px solid #E7E7E7;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+  }
+
+  &:hover {
+    border: 1px solid #CDCDCD;
+  }
+
+  &:active {
+    border: 1px solid @second-green;
+  }
+
+  &:focus {
+    border: 2px solid @dark-gray;
+  }
+
+  &:invalid {
+    border: 2px solid rgba(255, 130, 130, 1);
   }
 }
 
