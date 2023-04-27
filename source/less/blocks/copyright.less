@@ -1,4 +1,4 @@
-.copyright {
+.copyright__link {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -7,6 +7,11 @@
   @media (min-width: @tablet-width) {
     width: 168px;
   }
+}
+
+.copyright__text {
+  font-size: 16px;
+  text-transform: capitalize;
 }
 
 .copyright::before {
@@ -19,4 +24,16 @@
     height: 1px;
     background: @light-gray;
   }
+}
+
+.copyright:hover path {
+  fill: @basic-green;
+}
+
+.copyright:active path {
+  opacity: 0.3;
+}
+
+.copyright:active .copyright__text {
+  opacity: 0.3;
 }

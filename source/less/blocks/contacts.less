@@ -7,6 +7,7 @@
 }
 
 .contacts-block {
+  position: relative;
   display: flex;
   text-align: left;
   align-items: center;
@@ -18,7 +19,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    position: relative;
     top: 95px;
     gap: 87px;
     width: 565px;
@@ -57,3 +57,32 @@
     text-align: left;
   }
 }
+
+.map {
+  position: relative;
+  width: 320px;
+  height: 362px;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1280px;
+    top: -198px;
+    margin-bottom: -203px;
+  }
+}
+
+// не отрисовался псевдоэлемент
+
+// .map::after {
+//   position: absolute;
+//   content: "";
+//   top: 100px;
+//   left: 100px;
+//   width: 57px;
+//   height: 53px;
+//   background: url("../img/map-pin.png") no-repeat;
+// }
