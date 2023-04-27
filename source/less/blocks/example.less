@@ -3,6 +3,7 @@
 
   @media (min-width: @tablet-width) {
     background: @white;
+    background: linear-gradient(0deg, rgba(242,242,242,1) 43%, rgba(255,255,255,1) 43%);
   }
 
   @media (min-width: @desktop-width) {
@@ -141,19 +142,23 @@
 }
 
 .example__spent {
+  display: flex;
+  justify-content: center;
   .title();
   font-size: 14px;
   line-height: 20px;
-  text-align: center;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
+    flex-direction: column;
+    justify-content: start;
     font-size: 20px;
-    margin-left: 30px;
+    margin-left: 20px;
     text-align: right;
   }
 
   @media (min-width: @desktop-width) {
+    flex-direction: row;
     text-align: left;
     margin-left: 0;
   }
@@ -161,9 +166,11 @@
 
 .slider-cat-wrapper {
   display: flex;
+  padding-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     justify-content: center;
+    padding-bottom: 100px;
   }
 }
 
@@ -173,6 +180,43 @@
   @media (min-width: @tablet-width) {
     width: 280px;
   }
+}
 
+.range-slider-button {
+  position: relative;
+}
 
+.range-slider {
+  display: block;
+  width: 4px;
+  height: 256px;
+  border: 2px solid @special-gray;
+  border-radius: 2px;
+
+  @media (min-width: @tablet-width) {
+    height: 512px;
+  }
+}
+
+.range-toggle {
+  position: absolute;
+  top: 50%;
+  left: -19px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: @white;
+  border: 2px solid @special-gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-toggle::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 7px;
+  width: 40px;
+  height: 40px;
+  background: url("../img/slider-arrows.svg") no-repeat;
 }
