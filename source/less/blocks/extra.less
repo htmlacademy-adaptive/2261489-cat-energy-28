@@ -42,37 +42,20 @@
 }
 
 .extra__title::before {
-
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    content: "";
-    top: 18px;
-    left: -70px;
-    width: 30px;
-    height: 2px;
-    background: @basic-green;
-  }
-}
-
-.extra__title::after {
   position: absolute;
   content: "";
-  top: 13px;
-  left: 163px;
-  min-width: 158px;
+  top: 18px;
+  left: 164px;
+  width: 100vw;
   height: 2px;
   background: @basic-green;
 
   @media (min-width: @tablet-width) {
     top: 18px;
-    left: 250px;
-    min-width: 500px;
-  }
-
-  @media (min-width: @desktop-width) {
-    min-width: 1100px;
+    left: -70px;
   }
 }
+
 
 .extra__item:last-child {
   margin-bottom: 34px;
