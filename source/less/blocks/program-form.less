@@ -121,12 +121,35 @@
   width: 30px;
   height: 30px;
   border: 1px solid #CDCDCD;
-  border-radius: 50%;
 
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
 
+  }
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: relative;
+  display: block;
+  content: "";
+  top: 6px;
+  left: 4px;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/check-mark.svg");
+
+  @media (min-width: @tablet-width) {
+    top: 7px;
+    left: 7px;
+    width: 26px;
+    height: 26px;
+    background-image: url("../img/check-mark-tablet.svg");
+    background-repeat: no-repeat;
   }
 }
 
