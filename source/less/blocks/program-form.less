@@ -46,6 +46,7 @@
   margin: 0;
   margin-bottom: 39px;
   color: @black;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     width: 323px;
@@ -105,6 +106,46 @@
   }
 }
 
+.control {
+  display: flex;
+  gap: 15px;
+}
+
 .control:active {
   opacity: 0.3;
+}
+
+.control-mark {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #CDCDCD;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+
+  }
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: relative;
+  display: block;
+  content: "";
+  top: 8px;
+  left: 8px;
+  width: 13px;
+  height: 13px;
+  background-color: @basic-green;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 11px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+
+  }
 }
