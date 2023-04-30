@@ -63,6 +63,7 @@ a {
   text-decoration: none;
   display: block;
   text-transform: uppercase;
+  color: inherit;
 }
 
 img {
@@ -82,6 +83,11 @@ li {
   padding: 0;
 }
 
+dl {
+  margin: 0;
+  padding: 0;
+}
+
 fieldset {
   margin: 0;
   padding: 0;
@@ -92,21 +98,54 @@ textarea {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 label {
   font-family: "Oswald", sans-serif;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
+  margin-right: 13px;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 input {
   flex-grow: 1;
-  margin-left: 13px;
   padding: 11px 20px;
   font-family: "Oswald", sans-serif;
-  font-size: 20px;
-  line-height: 30px;
+  font-size: 16px;
+  line-height: 18px;
+  border: 1px solid #E7E7E7;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &:hover {
+    border: 1px solid #CDCDCD;
+  }
+
+  &:active {
+    border: 1px solid @second-green;
+  }
+
+  &:focus {
+    border: 2px solid @dark-gray;
+  }
+
+  &:invalid {
+    border: 2px solid rgba(255, 130, 130, 1);
+  }
 }
 
 .title {

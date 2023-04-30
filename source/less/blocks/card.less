@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 280px;
@@ -18,19 +19,6 @@
   }
 }
 
-.card-wrapper {
-  display: flex;
-
-  @media (min-width: @tablet-width) {
-    flex-direction: column;
-  }
-}
-
-.card:last-child {
-  margin-bottom: 36px;
-  padding: 0 60px;
-}
-
 .card__title {
   .title();
   color: @darker-gray;
@@ -43,6 +31,53 @@
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 21px;
+    margin-top: 46px;;
+  }
+}
+
+.card__title::before {
+  @media (max-width: @mobile-only-width) {
+    position: absolute;
+    content: "";
+    top: -19px;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    background: @light-gray;
+  }
+
+}
+
+.card-wrapper {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.card:last-child {
+  margin-bottom: 36px;
+  padding: 0 10px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 75px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 40px;
+  }
+}
+
+.card:last-of-type::after {
+  @media (max-width: @mobile-only-width) {
+    position: absolute;
+    content: "";
+    top: ;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    background: @light-gray;
   }
 }
 

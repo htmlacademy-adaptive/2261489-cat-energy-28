@@ -3,47 +3,53 @@
 
   @media (min-width: @tablet-width) {
     background: @white;
+    background: linear-gradient(0deg, rgba(242,242,242,1) 43%, rgba(255,255,255,1) 43%);
   }
 
   @media (min-width: @desktop-width) {
-    background: @basic-gray;
+    background: rgb(242,242,242);
+    background: linear-gradient(0deg, rgba(242,242,242,1) 77%, rgba(255,255,255,1) 77%);
   }
 }
 
 .example-main-wrapper {
   @media (min-width: @desktop-width) {
     display: flex;
+    justify-content: space-between;
+    padding-bottom: 75px;
   }
 }
 
 .example-wrapper {
-
+  padding-top: 25px;
 
   @media (min-width: @tablet-width) {
-
+    padding-top: 43px;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
     box-sizing: border-box;
     width: 434px;
-    padding: 70px 0 75px;
+    padding: 0;
   }
 }
 
 .example__title {
   .main-title();
   line-height: 40px;
+  margin-top: 25px;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     .main-title-big();
+    margin-top: 43px;
     margin-bottom: 63px;
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
-    top: -156px;
+    margin-bottom: 146px;
+    margin-top: 0;
   }
 }
 
@@ -54,6 +60,10 @@
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 69px;
   }
 }
 
@@ -72,45 +82,150 @@
   .example__list {
     display: flex;
     gap: 32px;
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      gap: 42px;
+      margin-bottom: 100px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 55px;
+    }
   }
+
+.example__item {
+  display: flex;
+  flex-direction: column;
+  width: 124px;
+
+  @media (min-width: @tablet-width) {
+    width: 162px;
+    gap: 11px;
+  }
+
+}
 
 .example__number {
   .title();
   line-height: 24px;
+  text-align: center;
+  border: 1px @dark-gray solid;
+  padding: 15px 20px 17px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 37px;
+    padding: 15px 20px 20px;
   }
 }
 
-.example__item {
-  border: 1px @dark-gray solid;
-  margin-bottom: 20px;
+.example__description {
+  width: 77px;
+  margin: -13px auto 0;
+  text-align: center;
+  font-size: 12px;
+  text-transform: lowercase;
+  background-color: @light-gray;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 100px;
+    width: 125px;
+    margin: -22px auto 0;
+    font-size: 14px;
+    background-color: @white;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 55px;
+    margin: -26px auto 0;
+    background-color: @basic-gray;
   }
 }
 
 .example__spent {
+  display: flex;
+  justify-content: center;
   .title();
   font-size: 14px;
   line-height: 20px;
-  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    flex-direction: column;
+    justify-content: start;
     font-size: 20px;
-    margin-left: 167px;
     text-align: right;
   }
 
   @media (min-width: @desktop-width) {
+    flex-direction: row;
     text-align: left;
     margin-left: 0;
   }
 }
+
+.slider-cat-wrapper {
+  display: flex;
+  padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+  }
+}
+
+.cat-before-image,
+.cat-after-image {
+
+  @media (min-width: @tablet-width) {
+    width: 280px;
+  }
+}
+
+.range-slider-button {
+  position: relative;
+  background-color: @special-gray;
+
+}
+
+
+
+.range-slider {
+  display: block;
+  width: 4px;
+  height: 256px;
+  border: 2px solid @special-gray;
+  border-radius: 2px;
+
+  @media (min-width: @tablet-width) {
+    height: 512px;
+  }
+}
+
+.range-toggle {
+  position: absolute;
+  top: 50%;
+  left: -19px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: @white;
+  border: 2px solid @special-gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-toggle::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 7px;
+  width: 40px;
+  height: 40px;
+  background: url("../img/slider-arrows.svg") no-repeat;
+}
+

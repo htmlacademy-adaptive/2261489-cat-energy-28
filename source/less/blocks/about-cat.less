@@ -1,5 +1,7 @@
 .about-cat {
-
+  position: relative;
+  margin-bottom: 23px;
+  border-bottom: none;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 65px;
@@ -17,6 +19,21 @@
   @media (min-width: @tablet-width) {
     .main-title();
     margin-bottom: 76px;
+  }
+}
+
+.about-cat__title::before {
+  position: absolute;
+  content: "";
+  top: 13px;
+  left: 143px;
+  width: 100vw;
+  height: 2px;
+  background: @basic-green;
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: -70px;
   }
 }
 

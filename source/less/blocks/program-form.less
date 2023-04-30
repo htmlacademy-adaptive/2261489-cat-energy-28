@@ -1,3 +1,11 @@
+.program-form {
+  border-top: 1px solid @light-gray;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
+}
+
 .program-form__wrapper {
 
   @media (min-width: @tablet-width) {
@@ -38,6 +46,7 @@
   margin: 0;
   margin-bottom: 39px;
   color: @black;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     width: 323px;
@@ -51,9 +60,15 @@
 .program-selection__fields {
   border: none;
   border-bottom: 1px solid @light-gray;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .program-form__button {
+  font-size: 16px;
+  line-height: 20px;
   margin-bottom: 21px;
 
   @media (min-width: @tablet-width) {
@@ -70,6 +85,7 @@
 
 .program-form__asterisk {
   margin-bottom: 32px;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
@@ -87,5 +103,72 @@
   @media (min-width: @desktop-width) {
     gap: 84px;
     margin-bottom: 82px;
+  }
+}
+
+.control {
+  display: flex;
+  gap: 15px;
+}
+
+.control:active {
+  opacity: 0.3;
+}
+
+.control-mark {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #CDCDCD;
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+
+  }
+}
+
+.control-input[type="radio"] + .control-mark {
+  border-radius: 50%;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::before {
+  position: relative;
+  display: block;
+  content: "";
+  top: 6px;
+  left: 4px;
+  width: 18px;
+  height: 14px;
+  background-image: url("../img/check-mark.svg");
+
+  @media (min-width: @tablet-width) {
+    top: 7px;
+    left: 7px;
+    width: 26px;
+    height: 26px;
+    background-image: url("../img/check-mark-tablet.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.control-input[type="radio"]:checked + .control-mark::before {
+  position: relative;
+  display: block;
+  content: "";
+  top: 8px;
+  left: 8px;
+  width: 13px;
+  height: 13px;
+  background-color: @basic-green;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    top: 11px;
+    left: 11px;
+    width: 18px;
+    height: 18px;
+
   }
 }

@@ -1,3 +1,8 @@
+.extra {
+  position: relative;
+}
+
+
 .extra__list {
 
 
@@ -15,6 +20,8 @@
 }
 
 .extra__item {
+  margin-bottom: 13px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 32px;
   }
@@ -33,6 +40,22 @@
     margin-bottom: 57px;
   }
 }
+
+.extra__title::before {
+  position: absolute;
+  content: "";
+  top: 18px;
+  left: 164px;
+  width: 100vw;
+  height: 2px;
+  background: @basic-green;
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: -70px;
+  }
+}
+
 
 .extra__item:last-child {
   margin-bottom: 34px;

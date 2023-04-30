@@ -1,12 +1,35 @@
+.owner-contacts {
+  position: relative;
+  margin-bottom: 23px;
+  border-bottom: none;
+}
+
 .owner-contacts__title {
   .title();
   margin-bottom: 35px;
+  margin-top: 26px;
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     .main-title();
     margin-bottom: 76px;
   }
 }
+
+.owner-contacts__title::before {
+  position: absolute;
+  content: "";
+  top: 44px;
+  left: 201px;
+  width: 100vw;
+  height: 2px;
+  background: @basic-green;
+
+  @media (min-width: @tablet-width) {
+    top: 18px;
+    left: -70px;
+  }
+}
+
 
 .owner-contacts__list {
 
@@ -19,11 +42,11 @@
 }
 
 .owner-contacts__item {
+  display: flex;
+  align-items: center;
   margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
-    display: flex;
-    align-items: center;
     margin-bottom: 65px;
   }
 
@@ -32,4 +55,18 @@
     align-items: center;
     margin-bottom: 67px;
   }
+}
+
+.email-field {
+  background-image: url("../img/email-icon.svg");
+  background-repeat: no-repeat;
+  background-position: top 13px right 15px;
+  background-size: 20px 20px;
+}
+
+.tel-field {
+  background-image: url("../img/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: top 13px right 15px;
+  background-size: 20px 20px;
 }

@@ -15,12 +15,12 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 135px;
+    gap: 37px 137px;
   }
 
   @media (min-width: @desktop-width) {
-    column-gap: 70px;
-    margin-bottom: 205px;
+    gap: 70px;
+    margin-bottom: 69px;
   }
 }
 
@@ -31,24 +31,146 @@
 
   @media (min-width: @tablet-width) {
     .main-title-big();
-    padding: 15px 150px 30px 0;
+    padding: 0 150px 30px 0;
+    margin-top: 45px;
+    margin-bottom: 72px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 150px 30px 0;
+    margin-top: 70px;
   }
 }
 
 .features__item {
+  position: relative;
+  display: flex;
+  gap: 20px;
   margin-bottom: 20px;
-  padding-left: 80px;
 
   @media (min-width: @tablet-width) {
+    flex-direction: column;
+    gap: 31px;
     width: 250px;
-    padding: 151px 0 57px;
+    min-height: 280px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 250px;
+  }
+}
+
+.features__text {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 20px;
+    z-index: 0;
+  }
+}
+
+.features__item::before {
+  position: relative;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  min-width: 60px;
+  height: 60px;
+  background: @basic-green no-repeat;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.features__item::after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  left: 15px;
+  width: 30px;
+  height: 32px;
+  background: url("../img/leaf-icon.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 25px;
+    left: 24px;
+  }
+}
+
+.features__item--icon-powder::after {
+  top: 16px;
+  left: 17px;
+  width: 26px;
+  height: 28px;
+  background: url("../img/powder-icon.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 26px;
+    left: 27px;
+  }
+}
+
+.features__item--icon-eat::after {
+  top: 15px;
+  left: 17px;
+  width: 25px;
+  height: 30px;
+  background: url("../img/eat-icon.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 25px;
+    left: 27px;
+  }
+}
+
+.features__item--icon-time::after {
+  top: 15px;
+  left: 17px;
+  width: 26px;
+  height: 31px;
+  background: url("../img/time-icon.svg") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 25px;
+    left: 27px;
+  }
+}
+
+.features__item .features__text::before {
+
+  @media (min-width: @tablet-width) {
+      position: absolute;
+      content: "1";
+      top: -30px;
+      left: 118px;
+      width: 112px;
+      height: 280px;
+      .title();
+      font-size: 280px;
+      color: @basic-gray;
+      z-index: -1;
+  }
+}
+
+.features__item:nth-of-type(2) .features__text::before {
+
+  @media (min-width: @tablet-width) {
+    content: "2";
+  }
+}
+
+.features__item:nth-of-type(3) .features__text::before {
+
+  @media (min-width: @tablet-width) {
+    content: "3";
+  }
+}
+
+.features__item:nth-of-type(4) .features__text::before {
+
+  @media (min-width: @tablet-width) {
+    content: "4";
   }
 }
