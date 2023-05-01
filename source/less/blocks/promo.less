@@ -15,7 +15,12 @@
 .promo-info-part {
   position: relative;
   min-height: 302px;
-  background: url("../img/background-cat.png") no-repeat;
+  background: url("../img/index-background-cat.png") no-repeat;
+
+  @media (min-resolution: @retina) {
+    background: url("../img/index-background-cat@2x.png") no-repeat;
+    background-size: cover;
+  }
 
   @media (min-width: @tablet-width) {
     background: @white;
@@ -23,7 +28,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-width: 600px;
+    min-width: 610px;
+    padding: 110px 0 0 80px;
   }
 }
 
@@ -47,12 +53,19 @@
   @media (min-width: @desktop-width) {
     position: relative;
     min-height: 694px;
-    top: -110px;
-    background: url("../img/background-cat-desktop.png") no-repeat;
+    top: -118px;
+    background: url("../img/index-background-cat-desktop.png") no-repeat;
     background-size: cover;
-    min-width: 720px;
+    min-width: 1043px;
+
+    @media (min-resolution: @retina) {
+      background: url("../img/index-background-cat-desktop@2x.png") no-repeat;
+      background-size: cover;
+    }
   }
-}
+  }
+
+
 
 .promo-image-part::after {
   @media (min-width: @desktop-width) {
