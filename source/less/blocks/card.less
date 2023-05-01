@@ -49,9 +49,11 @@
 }
 
 .card-wrapper {
-  display: flex;
+    display: grid;
+    grid-template-columns: 140px 140px;
 
   @media (min-width: @tablet-width) {
+    display: flex;
     flex-direction: column;
   }
 }
