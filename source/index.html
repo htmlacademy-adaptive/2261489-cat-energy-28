@@ -16,9 +16,9 @@
           <picture>
             <source media="(min-width: 1280px)" srcset="img/logo-desktop.svg 1x, img/logo-desktop@2x.svg 2x" width="202" height="59">
             <source media="(min-width: 768px)" srcset="img/logo-tablet.svg 1x, img/logo-tablet@2x.svg 2x" width="174" height="52">
-            <img class="logo__image" src="img/logo-mobile.svg" width="33" height="37" alt="Логотип Cat Energy.">
+            <img class="logo__image" srcset="img/logo-mobile.svg 1x, img/logo-mobile@2x.svg 2x" width="33" height="37" alt="Логотип Cat Energy.">
           </picture>
-          <img class="logo__type-image" src="img/logo-type-mobile.svg" width="101" height="18" alt="Cat Energy.">
+          <img class="logo__type-image" srcset="img/logo-type-mobile.svg 1x, img/logo-type-mobile@2x.svg 2x" width="101" height="18" alt="Cat Energy.">
         </a>
       </div>
       <nav class="main-navigation main-navigation--closed main-navigation--nojs">
@@ -201,8 +201,11 @@
         </div>
         <div class="social-wrapper wrapper">
           <a class="main-footer__logo-type" href="index.html">
-            <img class="main-footer__logo-type-image" src="img/logo-type-mobile.svg" width="101" height="18"
+            <picture>
+              <source media="(min-width: 768px)"
+              <img class="main-footer__logo-type-image" src="img/logo-type-mobile.svg" width="101" height="18"
               alt="Cat Energy.">
+            </picture>
           </a>
           <div class="main-footer__social social">
             <ul class="social__list">
