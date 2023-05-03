@@ -1,13 +1,17 @@
-.logo-wrapper {
-  display: flex;
-  align-items: center;
-
-  @media (min-width: @tablet-width) {
-    margin-right: auto;
+.logo {
+  @media (max-width: @mobile-only-width) {
+    display: flex;
   }
 }
 
+.logo__type-image {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
 
-.logo {
-  margin-right: 55px;
+.logo__image {
+  @media (max-width: @mobile-only-width) {
+    margin-right: 55px;
+  }
 }
