@@ -10,7 +10,7 @@ import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import webp from 'gulp-webp'
 import svgo from 'gulp-svgmin';
-import stacksvg from 'gulp-stacksvg';
+import { stacksvg } from "gulp-stacksvg";
 import {deleteAsync} from 'del';
 import browser from 'browser-sync';
 
@@ -41,9 +41,17 @@ const minHTML = () => {
 // Minify JS
 const minJS = () => {
   return gulp.src('source/js/*.js')
-  .pipe(terser)
+  .pipe(terser())
   .pipe(gulp.dest('build/js'));
 }
+
+// Scripts
+
+const scripts = () => {
+  return gulp.src('source/js/script.js')
+  .pipe(gulp.dest('build/js'))
+  .pipe(browser.stream());
+  }
 
 // Optimize Images
 const optimizeImages = () => {
@@ -68,7 +76,7 @@ const createWebp = () => {
 // Optimize SVG
 export const optimizeSVG = () => {
   return gulp.src(['source/img/*.svg',  '!source/img/icons/*.svg'])
-  .pipe(svgo)
+  .pipe(svgo())
   .pipe(gulp.dest('build/img'));
   }
 
@@ -81,13 +89,13 @@ const createStack = () => {
 
 // Copy Fonts&Favicons
 const copy = (done) => {
-  return gulp.src(['source/fonts/*.{woff, woff2}',
+  gulp.src(['source/fonts/*.{woff, woff2}',
   'source/*.ico',
-  'source/img/favicons/*.{svg,png}']),
+  'source/img/favicons/*.{svg,png}'],
   {
     base: 'source'
-  }
-  .pipe(gulp.dest("build"))
+  })
+  .pipe(gulp.dest('build'))
   done();
 }
 
@@ -101,7 +109,7 @@ const clean = () => {
 const server = (done) => {
   browser.init({
   server: {
-  baseDir: 'build'
+  baseDir: 'source'
   },
     cors: true,
     notify: false,
@@ -133,6 +141,7 @@ export const build = gulp.series(
   gulp.parallel(
     styles,
     minHTML,
+    scripts,
     minJS,
     createStack,
     createWebp
@@ -140,13 +149,14 @@ export const build = gulp.series(
 )
 
 
-export default = gulp.series(
+export default gulp.series(
   clean,
   copy,
   copyImages,
   gulp.parallel(
     styles,
     minHTML,
+    scripts,
     minJS,
     createStack,
     createWebp
