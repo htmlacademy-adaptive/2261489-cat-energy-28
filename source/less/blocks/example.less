@@ -163,6 +163,7 @@
 }
 
 .slider-cat-wrapper {
+  position: relative;
   display: flex;
   padding-bottom: 40px;
 
@@ -178,15 +179,23 @@
 
 .cat-before-image,
 .cat-after-image {
+  position: absolute;
 
   @media (min-width: @tablet-width) {
     width: 280px;
   }
 }
 
+.cat-after-image {
+  z-index: 1;
+}
+
 .range-slider-button {
   position: relative;
+  left: 50%;
+  height: 100%;
   background-color: @special-gray;
+  z-index: 2;
 
 }
 

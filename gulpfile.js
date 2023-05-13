@@ -83,15 +83,17 @@ export const optimizeSVG = () => {
 // Create Stack
 const createStack = () => {
   return gulp.src('source/img/icons/*.svg')
-  .pipe(stacksvg({ output: `sprite` }))
+  .pipe(stacksvg({ output: `stack` }))
   .pipe(gulp.dest('build/img/icons'));
 }
 
 // Copy Fonts&Favicons
 const copy = (done) => {
-  gulp.src(['source/fonts/*.{woff, woff2}',
+ gulp.src([
+  'source/fonts/*.{woff2,woff}',
   'source/*.ico',
-  'source/img/favicons/*.{svg,png}'],
+  'source/img/favicons/*.{svg,png}',
+  'source/*.webmanifest'],
   {
     base: 'source'
   })

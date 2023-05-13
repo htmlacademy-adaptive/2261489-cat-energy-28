@@ -115,7 +115,7 @@
 }
 
 .main-navigation--opened {
-  @mobile-only-width {
+  @media (max-width: @mobile-only-width) {
     position: absolute;
     background: @white;
     z-index: 2;
@@ -168,7 +168,10 @@
 }
 
 .main-navigation--nojs .main-navigation__list {
-  display: block;
+  @media (max-width: @mobile-only-width) {
+    display: block;
+  }
+
 }
 
 
