@@ -168,11 +168,11 @@
   padding-bottom: 40px;
 
   @media (min-width: @tablet-width) {
-    justify-content: center;
     padding-bottom: 100px;
   }
 
   @media (min-width: @desktop-width) {
+    width: 560px;
     padding-bottom: 0;
   }
 }
@@ -182,7 +182,7 @@
   position: absolute;
 
   @media (min-width: @tablet-width) {
-    width: 280px;
+    width: 560px;
   }
 }
 
@@ -196,6 +196,14 @@
   height: 100%;
   background-color: @special-gray;
   z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 50%;
+  }
 
 }
 
