@@ -90,7 +90,7 @@ const createStack = () => {
 // Copy Fonts&Favicons
 export const copy = (done) => {
  gulp.src([
-  'source/fonts/*.{woff2,woff}',
+  'source/fonts/**/*.{woff2,woff}',
   'source/*.ico',
   'source/img/favicons/*.{svg,png}',
   'source/*.webmanifest'],
