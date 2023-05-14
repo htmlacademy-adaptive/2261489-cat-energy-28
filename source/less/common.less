@@ -17,7 +17,14 @@
   overflow: hidden;
 }
 
+.page {
+  height: 100%;
+}
+
 .page__body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
   margin: 0 auto;
   background: #FFFFFF;
   font-family: "Lato", sans-serif;
