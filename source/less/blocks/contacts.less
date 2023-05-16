@@ -19,10 +19,12 @@
   }
 
   @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     top: 95px;
     gap: 87px;
     width: 565px;
-    height: 198px;
+    min-height: 198px;
     padding: 56px 60px 56px 80px;
     background-color: @white;
     z-index: 1;
