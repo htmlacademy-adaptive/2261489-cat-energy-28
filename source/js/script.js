@@ -3,17 +3,17 @@ let navToggle = document.querySelector('.main-navigation__toggle');
 
 navMain.classList.remove('main-navigation--nojs');
 
-navToggle.addEventListener('click', function () {
-  if (navMain.classList.contains('main-navigation--closed')) {
-    navMain.classList.remove('main-navigation--closed');
-    navMain.classList.add('main-navigation--opened');
-  } else {
-    navMain.classList.add('main-navigation--closed');
-    navMain.classList.remove('main-navigation--opened');
-  }
-});
+// navToggle.addEventListener('click', function () {
+//   if (navMain.classList.contains('main-navigation--closed')) {
+//     navMain.classList.remove('main-navigation--closed');
+//     navMain.classList.add('main-navigation--opened');
+//   } else {
+//     navMain.classList.add('main-navigation--closed');
+//     navMain.classList.remove('main-navigation--opened');
+//   }
+// });
 
 
-const rangeBar = document.querySelector('.range-toggle');
-const afterImg = document.querySelector('.after');
-  rangeBar.addEventListener('input', () => cat-after.style.width = `${rangeBar.value}%`);
+// const rangeBar = document.querySelector('.range-toggle');
+// const afterImg = document.querySelector('.after');
+//   rangeBar.addEventListener('input', () => cat-after.style.width = `${rangeBar.value}%`);
