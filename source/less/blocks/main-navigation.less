@@ -1,5 +1,7 @@
+
+
+
 .main-navigation__list {
-  min-width: 280px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -22,7 +24,10 @@
   position: relative;
 
   @media (max-width: @mobile-only-width) {
-    width: 100vw;
+    width: 280px;
+  }
+
+  @media (max-width: @mobile-only-width) {
     text-align: center;
     padding: 22px 10px;
     border-top: 1px solid @third-gray;
@@ -124,6 +129,12 @@
     z-index: 2;
     top: 65px;
     left: 0;
+  }
+}
+
+.main-navigation--opened .main-navigation__item {
+  @media (max-width: @mobile-only-width) {
+    width: 320px;
   }
 }
 
