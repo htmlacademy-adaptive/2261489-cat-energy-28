@@ -73,22 +73,27 @@
 .additionals__title::before {
   position: absolute;
   content: "";
-  top: 20px;
+  top: 12px;
   right: 0;
   width: 100vw;
   height: 2px;
   background: @basic-green;
   box-shadow: 100vw 0px 0px @basic-green;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+  }
 }
 
-.additionals__title span::before {
-  position: absolute;
-  content: "";
-  width: 450px;
-  height: 2px;
-  background: @white;
-  top: 20px;
-  left: -10px;
+.additionals__title span {
+  position: relative;
+  background-color: @white;
+  padding-right: 21px;
+  box-shadow: -40px 0 0 @white;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 35px;
+  }
 }
 
 .additionals__list {
