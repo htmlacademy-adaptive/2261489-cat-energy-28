@@ -3,6 +3,7 @@
 
   @media (min-width: @desktop-width) {
     position: relative;
+    min-height: 400px;
   }
 }
 
@@ -61,19 +62,17 @@
 }
 
 .map {
-  position: relative;
-  width: 320px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 362px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
     height: 400px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1280px;
-    top: -198px;
-    margin-bottom: -203px;
   }
 }
 

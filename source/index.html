@@ -10,7 +10,6 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.min.css" rel="stylesheet">
-  <!-- <link href="css/style.css" rel="stylesheet"> -->
 </head>
 
 <body class="page__body">
@@ -24,8 +23,9 @@
             <img class="logo__image" srcset="img/logo.svg 1x, img/logo@2x.svg 2x" width="33" height="37"
             alt="Логотип Cat Energy.">
           </picture>
-          <img class="logo__type-image" srcset="img/logo-type.svg 1x, img/logo-type@2x.svg 2x" width="101" height="18"
-          alt="Cat Energy.">
+          <svg class="cat-energy-logo cat-energy-logo--header">
+              <use href="img/icons/stack.svg#logo-type"></use>
+            </svg>
         </a>
       </div>
       <nav class="main-navigation main-navigation--opened main-navigation--nojs">
@@ -213,8 +213,8 @@
                 Приглашаем к сотрудничеству дилеров!
               </h3>
               <p class="contacts__text">
-                ул. Большая Конюшенная, д. 19/8<br>
-                Санкт-Петербург
+                <span class="contacts__adress">ул. Большая Конюшенная, д. 19/8</span>
+                <span class="contacts__city">Санкт-Петербург</span>
               </p>
             </div>
           </div>
@@ -222,11 +222,10 @@
         </div>
         <div class="social-wrapper wrapper">
           <a class="main-footer__logo" href="index.html">
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/footer-logo-tablet.svg 1x, img/footer-logo-tablet@2x.svg 2x" width="143" height="26">
-              <img class="main-footer__logo-image" srcset="img/footer-logo.svg 1x, img/footer-logo@2x.svg 2x" width="128" height="24"
-              alt="Cat Energy.">
-            </picture>
+            <svg class="cat-energy-logo">
+              <use href="img/icons/stack.svg#logo-type"></use>
+            </svg>
+            <span class="visually-hidden">Сайт Cat Energy</span>
           </a>
           <div class="main-footer__social social">
             <ul class="social__list">

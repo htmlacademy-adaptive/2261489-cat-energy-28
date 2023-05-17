@@ -10,7 +10,6 @@
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/style.min.css" rel="stylesheet">
-  <!-- <link href="css/style.css" rel="stylesheet"> -->
 </head>
 
 <body class="page__body">
@@ -24,8 +23,9 @@
             <img class="logo__image" srcset="img/logo.svg 1x, img/logo@2x.svg 2x" width="33" height="37"
             alt="Логотип Cat Energy.">
           </picture>
-          <img class="logo__type-image" srcset="img/logo-type.svg 1x, img/logo-type@2x.svg 2x" width="101" height="18"
-          alt="Cat Energy.">
+          <svg class="cat-energy-logo cat-energy-logo--header">
+            <use href="img/icons/stack.svg#logo-type"></use>
+          </svg>
         </a>
       </div>
       <nav class="main-navigation main-navigation--closed main-navigation--nojs">
@@ -184,8 +184,8 @@
                 Приглашаем к сотрудничеству дилеров!
               </h3>
               <p class="contacts__text">
-                ул. Большая Конюшенная, д. 19/8<br>
-                Санкт-Петербург
+                <span class="contacts__adress">ул. Большая Конюшенная, д. 19/8</span>
+                <span class="contacts__city">Санкт-Петербург</span>
               </p>
             </div>
           </div>
@@ -193,11 +193,10 @@
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6722.926436114469!2d30.323819801284436!3d59.936489755831104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1682358030796!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" title="Офис компании СatEnergy, ул. Большая Конюшенная, д. 19/8, Санкт-Петербург" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <div class="social-wrapper wrapper">
           <a class="main-footer__logo" href="index.html">
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/footer-logo-tablet.svg 1x, img/footer-logo-tablet@2x.svg 2x" width="143" height="26">
-              <img class="main-footer__logo-image" srcset="img/footer-logo.svg 1x, img/footer-logo@2x.svg 2x" width="128" height="24"
-              alt="Cat Energy.">
-            </picture>
+            <svg class="cat-energy-logo">
+              <use href="img/icons/stack.svg#logo-type"></use>
+            </svg>
+            <span class="visually-hidden">Сайт Cat Energy</span>
           </a>
           <div class="main-footer__social social">
             <ul class="social__list">
