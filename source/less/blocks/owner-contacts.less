@@ -18,7 +18,7 @@
 .owner-contacts__title::before {
   position: absolute;
   content: "";
-  top: 16px;
+  top: 43px;
   right: 0;
   width: 100vw;
   height: 2px;
@@ -71,10 +71,23 @@
 }
 
 .email-field {
-  background-image: url("../img/email-icon.svg");
-  background-repeat: no-repeat;
-  background-position: top 13px right 15px;
-  background-size: 20px 20px;
+  // background-image: url("../img/email-icon.svg");
+  // background-repeat: no-repeat;
+  // background-position: top 13px right 15px;
+  // background-size: 20px 20px;
+  mask-image: url("../img/email-icon.svg");
+  mask-repeat: no-repeat;
+  mask-size: 20px 20px;
+  mask-position: top 13px right 15px;
+  background-color: @darker-gray;
+
+  &:focus {
+    background-color: @basic-green;
+  }
+
+  &:invalid {
+    background-color: #FF8282;
+  }
 }
 
 .tel-field {
@@ -82,4 +95,8 @@
   background-repeat: no-repeat;
   background-position: top 13px right 15px;
   background-size: 20px 20px;
+}
+
+input[placeholder] {
+  text-transform: uppercase;
 }

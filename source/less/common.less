@@ -106,10 +106,13 @@ textarea {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 18px;
+  text-transform: uppercase;
+  padding: 10px 14px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    padding: 10px 19px;
   }
 }
 
@@ -132,7 +135,8 @@ input {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 18px;
-  border: 1px solid #E7E7E7;
+  border-color: transparent;
+  outline: 1px solid #E7E7E7;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -140,19 +144,19 @@ input {
   }
 
   &:hover {
-    border: 1px solid #CDCDCD;
+    outline: 1px solid #CDCDCD;
   }
 
   &:focus {
-    border: 2px solid @dark-gray;
+    outline: 2px solid @dark-gray;
   }
 
   &:active {
-    border: 1px solid @second-green;
+    outline: 1px solid @second-green;
   }
 
   &:invalid {
-    border: 2px solid rgba(255, 130, 130, 1);
+    outline: 2px solid #FF8282;
   }
 }
 
