@@ -31,45 +31,6 @@
   }
 }
 
-
-// .additionals__title::before {
-//   @media (max-width: @mobile-only-width) {
-//     position: absolute;
-//     content: "";
-//     top: -25px;
-//     left: 0;
-//     width: 100vw;
-//     height: 1px;
-//     background: @light-gray;
-//   }
-
-//   @media (min-width: @tablet-width) {
-//     position: absolute;
-//     content: "";
-//     top: 18px;
-//     left: -30px;
-//     width: 30px;
-//     height: 2px;
-//     background: @basic-green;
-//   }
-// }
-
-// .additionals__title::after {
-//   @media (min-width: @tablet-width) {
-//     position: absolute;
-//     content: "";
-//     top: 18px;
-//     left: 400px;
-//     min-width: 500px;
-//     height: 2px;
-//     background: @basic-green;
-//   }
-
-//   @media (min-width: @desktop-width) {
-//     min-width: 1100px;
-//   }
-// }
-
 .additionals__title::before {
   position: absolute;
   content: "";
@@ -87,12 +48,12 @@
 
 .additionals__title span {
   position: relative;
+  display: block;
   background-color: @white;
-  padding-right: 21px;
-  box-shadow: -40px 0 0 @white;
+  box-shadow: -40px 0 0 @white, 21px 0 0 @white;
 
   @media (min-width: @tablet-width) {
-    padding-right: 35px;
+    box-shadow: 35px 0 0 @white;
   }
 }
 
@@ -146,18 +107,6 @@
   }
 
 }
-
-/*не работает
-.additional:first-of-type::before {
-    position: absolute;
-    content: "";
-    top: -25px;
-    left: 0;
-    width: 100vw;
-    height: 1px;
-    background: @light-gray;
-}
-*/
 
 .additional:last-child {
   margin-bottom: 55px;

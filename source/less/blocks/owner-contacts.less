@@ -18,12 +18,29 @@
 .owner-contacts__title::before {
   position: absolute;
   content: "";
-  top: 20px;
+  top: 16px;
   right: 0;
   width: 100vw;
   height: 2px;
   background: @basic-green;
   box-shadow: 100vw 0px 0px @basic-green;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+  }
+}
+
+.owner-contacts__title span {
+  position: relative;
+  display: block;
+  min-width: 187px;
+  background-color: @white;
+  box-shadow: -50px 0 0 @white, 10px 0 0 @white;
+
+  @media (min-width: @tablet-width) {
+    min-width: 517px;
+    box-shadow: -40px 0 0 @white, 50px 0 0 @white;
+  }
 }
 
 

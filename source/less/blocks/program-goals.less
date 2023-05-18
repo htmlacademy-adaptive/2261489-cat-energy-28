@@ -1,4 +1,5 @@
 .program-goals__list {
+  position: relative;
   padding-top: 23px;
   padding-bottom: 19px;
 
@@ -7,6 +8,19 @@
     padding-bottom: 29px;
     margin-bottom: 75px;
     border: 1px solid @light-gray;
+  }
+}
+
+.program-goals__list::after{
+  @media (max-width: @mobile-only-width) {
+    position: absolute;
+    content: "";
+    bottom: -1px;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    background: @light-gray;
+    box-shadow: 100vw 0 0 @light-gray;
   }
 }
 

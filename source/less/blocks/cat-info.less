@@ -6,6 +6,23 @@
   }
 }
 
+.cat-info__list {
+  position: relative;
+}
+
+.cat-info__list::after{
+  @media (max-width: @mobile-only-width) {
+    position: absolute;
+    content: "";
+    bottom: -15px;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    background: @light-gray;
+    box-shadow: 100vw 0 0 @light-gray;
+  }
+}
+
 .cat-info__item {
   display: flex;
   align-items: center;
