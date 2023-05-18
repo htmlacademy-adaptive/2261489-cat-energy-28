@@ -13,7 +13,3 @@ navToggle.addEventListener('click', function () {
   }
 });
 
-
-// const rangeBar = document.querySelector('.range-toggle');
-// const afterImg = document.querySelector('.after');
-//   rangeBar.addEventListener('input', () => cat-after.style.width = `${rangeBar.value}%`);
