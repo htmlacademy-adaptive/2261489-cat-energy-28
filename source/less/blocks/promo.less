@@ -1,5 +1,9 @@
 .promo {
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .promo-wrapper {
@@ -28,10 +32,10 @@
 
   @media (min-width: @tablet-width) {
     background: @white;
-    padding: 62px 237px 0 80px;
+    padding: 60px 0 0 117px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     min-width: 610px;
     padding: 110px 0 0 80px;
   }
@@ -95,7 +99,7 @@
     .main-title-big();
     width: 500px;
     padding: 0;
-    margin-bottom: 40px;
+    margin-bottom: 41px;
     text-align: left;
   }
 
@@ -153,6 +157,8 @@
 
   @media (min-width: @tablet-width) {
     top: 50px;
+    left: 4px;
+    padding: 16px 8px;
     margin: 0;
     z-index: 1;
   }
