@@ -36,7 +36,7 @@
 .example__title {
   .main-title();
   line-height: 40px;
-  margin-top: 25px;
+  margin-top: 27px;
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
@@ -106,10 +106,11 @@
 
 .example__number {
   .title();
+  text-transform: uppercase;
   line-height: 24px;
   text-align: center;
   border: 1px @dark-gray solid;
-  padding: 15px 20px 17px;
+  padding: 14px 20px 17px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -120,9 +121,10 @@
 
 .example__description {
   width: 77px;
-  margin: -13px auto 0;
+  margin: -11px auto 0;
   text-align: center;
   font-size: 12px;
+  line-height: 12px;
   text-transform: lowercase;
   background-color: @basic-gray;
 
@@ -257,8 +259,8 @@
 .range-slider::before {
   position: absolute;
   content: "";
-  top: 50%;
-  left: -19px;
+  top: 106px;
+  left: -21px;
   width: 40px;
   height: 40px;
   background: url(../img/slider-arrows.svg) white no-repeat;
@@ -267,4 +269,14 @@
   border-radius: 50%;
   cursor: pointer;
   z-index: 2;
+}
+
+.range-slider:hover,
+.range-slider:focus {
+  border: 2px solid @basic-green;
+}
+
+.range-slider:active {
+  border: 2px solid @second-green;
+  opacity: 0.6;
 }
