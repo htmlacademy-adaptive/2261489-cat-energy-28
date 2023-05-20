@@ -10,7 +10,8 @@
 
 .contacts-block {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   text-align: left;
   align-items: center;
   padding: 26px 0;
@@ -21,8 +22,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 87px;
     width: 565px;
     min-height: 198px;

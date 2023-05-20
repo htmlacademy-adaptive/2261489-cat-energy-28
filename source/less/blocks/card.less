@@ -4,8 +4,8 @@
   flex-direction: column;
   width: 280px;
   min-height: 190px;
-  padding: 0 20px;
-  margin-bottom: 33px;
+  padding-top: 11px;
+  margin-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     width: 324px;
@@ -21,14 +21,21 @@
   }
 }
 
+.card-wrapper {
+  min-height: 112px;
+  margin-bottom: 13px;
+
+}
+
 .card__title {
   .title();
+  text-transform: uppercase;
   color: @darker-gray;
   font-size: 16px;
   line-height: 20px;
   text-align: left;
   padding-right: 50px;
-  margin-bottom: 18px;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -48,7 +55,7 @@
   @media (max-width: @mobile-only-width) {
     position: absolute;
     content: "";
-    top: -19px;
+    top: -10px;
     right: 0;
     width: 100vw;
     height: 1px;
@@ -59,7 +66,7 @@
 }
 
 .card picture {
-  display: flex;
+  align-self: end;
 
   @media (min-width: @tablet-width) {
     height: 200px;
@@ -68,8 +75,8 @@
 }
 
 .card-wrapper {
-    display: grid;
-    grid-template-columns: 140px 140px;
+  display: grid;
+  grid-template-columns: 140px 140px;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -98,7 +105,7 @@
   @media (max-width: @mobile-only-width) {
     position: absolute;
     content: "";
-    top: 0;
+    top: -10px;
     right: 0;
     width: 100vw;
     height: 1px;
@@ -113,8 +120,6 @@
 }
 
 .specifications__list {
-  margin-top: 18px;
-  margin-bottom: 22px;
 
   @media (min-width: @tablet-width) {
     display: flex;
