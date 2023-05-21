@@ -85,6 +85,14 @@
   height: 20px;
   color: @black;
 
+  @media (min-width: @tablet-width) {
+    right: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 530px;
+  }
+
   &:focus {
     color: @basic-green;
     outline: none;
@@ -103,7 +111,7 @@
   background-size: 20px 20px;
 
   @media (min-width: @tablet-width) {
-    background-position: top 17px right 13px;
+    background-position: top 15px right 15px;
   }
 
 }

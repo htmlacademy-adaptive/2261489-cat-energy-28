@@ -1,8 +1,8 @@
 .contacts {
+  position: relative;
   background: @white;
 
   @media (min-width: @desktop-width) {
-    position: relative;
     min-height: 400px;
     padding-top: 95px;
   }
@@ -85,14 +85,25 @@
   }
 }
 
-// не отрисовался псевдоэлемент
 
-// .map::after {
-//   position: absolute;
-//   content: "";
-//   top: 100px;
-//   left: 100px;
-//   width: 57px;
-//   height: 53px;
-//   background: url("../img/map-pin.png") no-repeat;
-// }
+.contacts::after {
+  position: absolute;
+  content: "";
+  top: 170px;
+  left: 125px;
+  width: 57px;
+  height: 53px;
+  background: url("../img/map-pin.png") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 275px;
+    left: 335px;
+    width: 113px;
+    height: 105px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 55px;
+    left: 585px;
+  }
+}
