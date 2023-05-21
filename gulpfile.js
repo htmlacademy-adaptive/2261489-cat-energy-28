@@ -38,13 +38,6 @@ const minHTML = () => {
   .pipe(gulp.dest('build'));
 }
 
-// Minify JS
-// const minJS = () => {
-//   return gulp.src('source/js/*.js')
-//   .pipe(terser())
-//   .pipe(gulp.dest('build/js'));
-// }
-
 // Scripts
 
 const scripts = () => {
@@ -144,7 +137,6 @@ export const build = gulp.series(
     styles,
     minHTML,
     scripts,
-    // minJS,
     createStack,
     createWebp
   ),
@@ -159,7 +151,6 @@ export default gulp.series(
     styles,
     minHTML,
     scripts,
-    // minJS,
     createStack,
     createWebp
   ),
