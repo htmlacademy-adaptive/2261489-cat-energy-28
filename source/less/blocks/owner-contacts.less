@@ -2,6 +2,10 @@
   position: relative;
   margin-bottom: 7px;
   border-bottom: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
 }
 
 .owner-contacts__title {
@@ -11,7 +15,7 @@
 
   @media (min-width: @tablet-width) {
     .main-title();
-    margin-bottom: 76px;
+    margin-bottom: 73px;
   }
 }
 
@@ -39,7 +43,7 @@
 
   @media (min-width: @tablet-width) {
     min-width: 517px;
-    box-shadow: -40px 0 0 @white, 50px 0 0 @white;
+    box-shadow: -40px 0 0 @white, 35px 0 0 @white;
   }
 }
 
@@ -57,10 +61,10 @@
 .owner-contacts__item {
   display: flex;
   align-items: center;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 65px;
+    gap: 13px;
   }
 
   @media (min-width: @desktop-width) {
@@ -90,7 +94,7 @@
 .tel-field {
   background-image: url("../img/phone-icon.svg");
   background-repeat: no-repeat;
-  background-position: top 13px right 15px;
+  background-position: top 17px right 13px;
   background-size: 20px 20px;
 }
 
