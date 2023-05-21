@@ -14,7 +14,7 @@
   @media (max-width: @mobile-only-width) {
     position: absolute;
     content: "";
-    bottom: -15px;
+    bottom: -25px;
     right: 0;
     width: 100vw;
     height: 1px;
@@ -26,9 +26,13 @@
 .cat-info__item {
   display: flex;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     display: flex;
   }
+}
+
+.cat-info__item:last-of-type label {
+  width: 93px;
 }

@@ -1,9 +1,5 @@
 .program-form {
-  border-top: 1px solid @light-gray;
 
-  @media (min-width: @tablet-width) {
-    border: none;
-  }
 }
 
 .program-form-wrapper {
@@ -26,8 +22,9 @@
 }
 
 .program-form__title {
+  position: relative;
   .main-title();
-  margin-top: 27px;
+  margin-top: 24px;
   margin-bottom: 37px;
 
   @media (min-width: @tablet-width) {
@@ -42,15 +39,29 @@
   }
 }
 
+.program-form__title::before {
+  position: absolute;
+  content: "";
+  top: -28px;
+  right: 0;
+  width: 100vw;
+  height: 1px;
+  background: #d9d9d9;
+  box-shadow: 100vw 0 0#d9d9d9;
+}
+
 .program-form__description {
+  .title();
+  font-size: 14px;
+  line-height: 18px;
   margin: 0;
   margin-bottom: 39px;
+  padding-right: 50px;
   color: @black;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     width: 323px;
-    .title();
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 66px;
@@ -59,17 +70,13 @@
 
 .program-selection__fields {
   border: none;
-  border-bottom: 1px solid @light-gray;
-
-  @media (min-width: @tablet-width) {
-    border: none;
-  }
 }
 
 .program-form__button {
   font-size: 16px;
   line-height: 20px;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
+  min-height: 40px;
 
   @media (min-width: @tablet-width) {
     width: 282px;
