@@ -78,15 +78,16 @@
   }
 }
 
-.email-field {
-  // image: url("../img/email-icon.svg");
-  // repeat: no-repeat;
-  // size: 20px 20px;
-  // position: top 13px right 15px;
-  // color: @darker-gray;
+.email-icon {
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  color: @black;
 
   &:focus {
     color: @basic-green;
+    outline: none;
   }
 
   &:invalid {
@@ -98,8 +99,17 @@
 .tel-field {
   background-image: url("../img/phone-icon.svg");
   background-repeat: no-repeat;
-  background-position: top 17px right 13px;
+  background-position: top 10px right 10px;
   background-size: 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    background-position: top 17px right 13px;
+  }
+
+}
+
+.tel-field:invalid input {
+  outline: 1px solid #FF8282;
 }
 
 input[placeholder] {
