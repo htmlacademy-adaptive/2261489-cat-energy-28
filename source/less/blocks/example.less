@@ -258,13 +258,14 @@
 
   @media (min-width: @desktop-width) {
     left: 75px;
+    background-color: @special-gray;
   }
 }
 
 .range-slider::before {
   position: absolute;
   content: "";
-  top: 106px;
+  top: 50%;
   left: -21px;
   width: 40px;
   height: 40px;
@@ -279,6 +280,7 @@
 .range-slider:hover,
 .range-slider:focus {
   border: 2px solid @basic-green;
+  background-color: @basic-green;
 }
 
 .range-slider:active {
