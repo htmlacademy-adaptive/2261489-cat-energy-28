@@ -1,7 +1,15 @@
 .owner-contacts {
   position: relative;
-  margin-bottom: 23px;
+  margin-bottom: 7px;
   border-bottom: none;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .owner-contacts__title {
@@ -11,29 +19,40 @@
 
   @media (min-width: @tablet-width) {
     .main-title();
-    margin-bottom: 76px;
+    margin-bottom: 73px;
   }
 }
 
 .owner-contacts__title::before {
   position: absolute;
   content: "";
-  top: 44px;
-  left: 201px;
+  top: 42px;
+  right: 0;
   width: 100vw;
   height: 2px;
   background: @basic-green;
+  box-shadow: 100vw 0px 0px @basic-green;
 
   @media (min-width: @tablet-width) {
-    top: 18px;
-    left: -70px;
+    top: 20px;
+  }
+}
+
+.owner-contacts__title span {
+  position: relative;
+  display: block;
+  width: 191px;
+  background-color: @white;
+  box-shadow: -50px 0 0 @white, 10px 0 0 @white;
+
+  @media (min-width: @tablet-width) {
+    min-width: 517px;
+    box-shadow: -40px 0 0 @white, 35px 0 0 @white;
   }
 }
 
 
 .owner-contacts__list {
-
-
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 569px);
@@ -44,10 +63,10 @@
 .owner-contacts__item {
   display: flex;
   align-items: center;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 65px;
+    gap: 13px;
   }
 
   @media (min-width: @desktop-width) {
@@ -57,16 +76,47 @@
   }
 }
 
-.email-field {
-  background-image: url("../img/email-icon.svg");
-  background-repeat: no-repeat;
-  background-position: top 13px right 15px;
-  background-size: 20px 20px;
+.email-icon {
+  position: absolute;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  color: @black;
+
+  @media (min-width: @tablet-width) {
+    right: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 530px;
+  }
+
+  &:focus {
+    color: @basic-green;
+    outline: none;
+  }
+
+  &:invalid {
+    color: #FF8282;
+  }
 }
+
 
 .tel-field {
   background-image: url("../img/phone-icon.svg");
   background-repeat: no-repeat;
-  background-position: top 13px right 15px;
+  background-position: top 10px right 10px;
   background-size: 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    background-position: top 15px right 15px;
+  }
+}
+
+.tel-field:invalid input {
+  outline: 1px solid #FF8282;
+}
+
+input[placeholder] {
+  text-transform: uppercase;
 }

@@ -1,21 +1,36 @@
 .program-goals__list {
-  padding-top: 23px;
+  position: relative;
+  padding-top: 32px;
   padding-bottom: 19px;
 
   @media (min-width: @tablet-width) {
     padding-top: 25px;
     padding-bottom: 29px;
-    margin-bottom: 75px;
-    border: 1px solid @light-gray;
+    margin-bottom: 70px;
+  }
+}
+
+.program-goals__list::after{
+  @media (max-width: @mobile-only-width) {
+    position: absolute;
+    content: "";
+    bottom: -1px;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    background: @light-gray;
+    box-shadow: 100vw 0 0 @light-gray;
+  }
+}
+
+.program-goals__item {
+  @media (min-width: @tablet-width) {
+    margin-left: 27px;
   }
 }
 
 .program-goals__item:not(:last-child) {
   margin-bottom: 13px;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 18px;
-  }
 }
 
 .program-goal__label {
@@ -27,10 +42,6 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-
   }
 }
 

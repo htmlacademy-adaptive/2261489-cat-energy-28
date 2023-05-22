@@ -1,19 +1,10 @@
-.program-form {
-  border-top: 1px solid @light-gray;
-
-  @media (min-width: @tablet-width) {
-    border: none;
-  }
-}
-
 .program-form-wrapper {
-
   @media (min-width: @tablet-width) {
     padding: 0 70px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0 110px;
+    padding: 0 30px;
   }
 }
 
@@ -26,52 +17,67 @@
 }
 
 .program-form__title {
+  position: relative;
   .main-title();
-  margin-top: 27px;
+  margin-top: 24px;
   margin-bottom: 37px;
 
   @media (min-width: @tablet-width) {
     .main-title-big();
-    margin-top: 65px;
+    margin-top: 60px;
     margin-bottom: 54px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: 73px;
-    margin-bottom: 56px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+  }
+}
+
+.program-form__title::before {
+  @media (max-width: @mobile-only-width) {
+    position: absolute;
+    content: "";
+    top: -28px;
+    right: 0;
+    width: 100vw;
+    height: 1px;
+    background: #d9d9d9;
+    box-shadow: 100vw 0 0 #d9d9d9;
   }
 }
 
 .program-form__description {
+  .title();
+  font-size: 14px;
+  line-height: 18px;
   margin: 0;
   margin-bottom: 39px;
+  padding-right: 50px;
   color: @black;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
     width: 323px;
-    .title();
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 66px;
+    padding: 0;
   }
 }
 
 .program-selection__fields {
   border: none;
-  border-bottom: 1px solid @light-gray;
-
-  @media (min-width: @tablet-width) {
-    border: none;
-  }
 }
 
 .program-form__button {
   font-size: 16px;
   line-height: 20px;
-  margin-bottom: 21px;
+  margin-bottom: 19px;
+  min-height: 40px;
 
   @media (min-width: @tablet-width) {
+    font-size: 20px;
     width: 282px;
     height: 52px;
     margin-bottom: 0;
@@ -108,10 +114,11 @@
 
 .control {
   display: flex;
-  gap: 15px;
+  gap: 18px;
+  align-items: center;
 }
 
-.control:active {
+.control:disabled {
   opacity: 0.3;
 }
 
@@ -125,7 +132,6 @@
   @media (min-width: @tablet-width) {
     width: 40px;
     height: 40px;
-
   }
 }
 
@@ -137,15 +143,15 @@
   position: relative;
   display: block;
   content: "";
-  top: 6px;
-  left: 4px;
+  top: 7px;
+  left: 6px;
   width: 18px;
   height: 14px;
   background-image: url("../img/check-mark.svg");
 
   @media (min-width: @tablet-width) {
-    top: 7px;
-    left: 7px;
+    top: 10px;
+    left: 10px;
     width: 26px;
     height: 26px;
     background-image: url("../img/check-mark-tablet.svg");
@@ -165,8 +171,8 @@
   border-radius: 50%;
 
   @media (min-width: @tablet-width) {
-    top: 11px;
-    left: 11px;
+    top: 10px;
+    left: 10px;
     width: 18px;
     height: 18px;
 

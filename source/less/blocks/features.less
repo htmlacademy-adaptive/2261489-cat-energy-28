@@ -1,39 +1,26 @@
-.features-rapper {
-
-
-  @media (min-width: @tablet-width) {
-
-  }
-
-  @media (min-width: @desktop-width) {
-
-  }
-}
-
 .features__list {
-
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    gap: 37px 137px;
+    gap: 18px 133px;
   }
 
   @media (min-width: @desktop-width) {
-    gap: 70px;
-    margin-bottom: 69px;
+    gap: 73px;
+    margin-bottom: 5px;
   }
 }
 
 .features__title {
   .main-title();
   line-height: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 43px;
 
   @media (min-width: @tablet-width) {
     .main-title-big();
     padding: 0 150px 30px 0;
-    margin-top: 45px;
-    margin-bottom: 72px;
+    margin-top: 52px;
+    margin-bottom: 43px;
   }
 
   @media (min-width: @desktop-width) {
@@ -44,7 +31,7 @@
 .features__item {
   position: relative;
   display: flex;
-  gap: 20px;
+  gap: 21px;
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
@@ -63,7 +50,7 @@
     position: relative;
     font-size: 16px;
     line-height: 24px;
-    padding-right: 20px;
+    padding-right: 8px;
     z-index: 0;
   }
 }
@@ -72,8 +59,8 @@
   position: relative;
   display: block;
   content: "";
-  top: 0;
-  left: 0;
+  top: -2px;
+  left: 1px;
   min-width: 60px;
   height: 60px;
   background: @basic-green no-repeat;
@@ -139,37 +126,33 @@
 }
 
 .features__item .features__text::before {
-
-  @media (min-width: @tablet-width) {
-      position: absolute;
-      content: "1";
-      top: -30px;
-      left: 118px;
-      width: 112px;
-      height: 280px;
-      .title();
-      font-size: 280px;
-      color: @basic-gray;
-      z-index: -1;
+   @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "1";
+    top: -30px;
+    left: 118px;
+    width: 112px;
+    height: 280px;
+    .title();
+    font-size: 280px;
+    color: @basic-gray;
+    z-index: -1;
   }
 }
 
 .features__item:nth-of-type(2) .features__text::before {
-
   @media (min-width: @tablet-width) {
     content: "2";
   }
 }
 
 .features__item:nth-of-type(3) .features__text::before {
-
   @media (min-width: @tablet-width) {
     content: "3";
   }
 }
 
 .features__item:nth-of-type(4) .features__text::before {
-
   @media (min-width: @tablet-width) {
     content: "4";
   }

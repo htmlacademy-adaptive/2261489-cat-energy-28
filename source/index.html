@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.webmanifest">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page__body">
@@ -23,11 +23,12 @@
             <img class="logo__image" srcset="img/logo.svg 1x, img/logo@2x.svg 2x" width="33" height="37"
             alt="Логотип Cat Energy.">
           </picture>
-          <img class="logo__type-image" srcset="img/logo-type.svg 1x, img/logo-type@2x.svg 2x" width="101" height="18"
-          alt="Cat Energy.">
+          <svg class="cat-energy-logo-header">
+              <use href="img/icons/stack.svg#logo-type"></use>
+            </svg>
         </a>
       </div>
-      <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+      <nav class="main-navigation main-navigation--opened main-navigation--nojs">
         <div class="main-navigation-wrapper">
           <ul class="main-navigation__list">
             <li class="main-navigation__item">
@@ -170,7 +171,7 @@
                     <dt class="example__number title">
                       60 дней
                     </dt>
-                    <dd class="example__description">
+                    <dd class="example__description example__description--time">
                       Затрачено времени
                     </dd>
                   </div>
@@ -180,17 +181,22 @@
                 </p>
               </div>
           </div>
-          <div class="slider-cat-wrapper">
-            <div class="cat-before">
-              <img class="cat-before-image" src="img/cat-before.png" width="140" height="256px" alt="Cat before.">
-            </div>
-            <div class="range-slider-button">
-              <span class="range-slider"></span>
-              <button class="range-toggle"></button>
-            </div>
-            <div class="cat-after">
-              <img class="cat-after-image" src="img/cat-after.png" width="140" height="256px"
-              alt="Cat after.">
+          <div class="slider-cat">
+            <div class="slider-cat-wrapper">
+              <div class="cat-before">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/cat-before-tablet.png 1x, img/cat-before-tablet@2x.png 2x" width="560" height="256">
+                  <img class="cat-before-image" srcset="img/cat-before.png 1x, img/cat-before@2x.png 2x" width="280" height="256" alt="Cat before.">
+                </picture>
+              </div>
+                <span class="range-slider"></span>
+              <div class="cat-after">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/cat-after-tablet.png 1x, img/cat-after-tablet@2x.png 2x" width="560" height="256">
+                  <img class="cat-after-image" srcset="img/cat-after.png 1x, img/cat-after@2x.png 2x" width="560" height="256"
+                  alt="Cat after.">
+                </picture>
+              </div>
             </div>
           </div>
         </div>
@@ -206,8 +212,8 @@
                 Приглашаем к сотрудничеству дилеров!
               </h3>
               <p class="contacts__text">
-                ул. Большая Конюшенная, д. 19/8<br>
-                Санкт-Петербург
+                <span class="contacts__adress">ул. Большая Конюшенная, д. 19/8</span>
+                <span class="contacts__city">Санкт-Петербург</span>
               </p>
             </div>
           </div>
@@ -215,18 +221,17 @@
         </div>
         <div class="social-wrapper wrapper">
           <a class="main-footer__logo" href="index.html">
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/footer-logo-tablet.svg 1x, img/footer-logo-tablet@2x.svg 2x" width="143" height="26">
-              <img class="main-footer__logo-image" srcset="img/footer-logo.svg 1x, img/footer-logo@2x.svg 2x" width="101" height="18"
-              alt="Cat Energy.">
-            </picture>
+            <svg class="cat-energy-logo">
+              <use href="img/icons/stack.svg#logo-type"></use>
+            </svg>
+            <span class="visually-hidden">Сайт Cat Energy</span>
           </a>
           <div class="main-footer__social social">
             <ul class="social__list">
               <li class="social__item">
                 <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
                   <svg class="vk-icon">
-                    <use href="img/stack.svg#vk-icon"></use>
+                    <use href="img/icons/stack.svg#vk-icon"></use>
                   </svg>
                   <span class="visually-hidden">Наш ВК</span>
                 </a>
@@ -234,7 +239,7 @@
               <li class="social__item">
                 <a class="social__link social__link--youtube" href="https://www.youtube.com/channel/UChUxTMjJGo-JDRY8pNTGL2g">
                   <svg class="youtube-icon">
-                    <use href="img/stack.svg#youtube-icon"></use>
+                    <use href="img/icons/stack.svg#youtube-icon"></use>
                   </svg>
                   <span class="visually-hidden">Наш Youtube</span>
                 </a>
@@ -242,7 +247,7 @@
               <li class="social__item">
                 <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
                   <svg class="telegram-icon">
-                    <use href="img/stack.svg#telegram-icon"></use>
+                    <use href="img/icons/stack.svg#telegram-icon"></use>
                   </svg>
                   <span class="visually-hidden">Наш Telegram</span>
                 </a>
@@ -255,7 +260,7 @@
                 HTML Academy
               </p>
               <svg class="html-academy-logo">
-                <use href="img/stack.svg#html-academy-logo"></use>
+                <use href="img/icons/stack.svg#html-academy-icon"></use>
               </svg>
               <span class="visually-hidden">Ссылка на курс HTML Academy</span>
             </a>

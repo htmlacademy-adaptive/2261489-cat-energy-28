@@ -1,13 +1,3 @@
-.additionals {
-
-
-  @media (min-width: @tablet-width) {
-  }
-
-  @media (min-width: @desktop-width) {
-  }
-  }
-
 .additionals-wrapper {
   display: flex;
   flex-direction: column;
@@ -22,60 +12,53 @@
   position: relative;
   .title();
   line-height: 24px;
-  margin-bottom: 50px;
+  margin-bottom: 48px;
 
   @media (min-width: @tablet-width) {
     .main-title();
     margin-bottom: 80px;
-    padding: 0 30px;
-  }
-
-
-}
-
-
-.additionals__title::before {
-  @media (max-width: @mobile-only-width) {
-    position: absolute;
-    content: "";
-    top: -25px;
-    left: 0;
-    width: 100vw;
-    height: 1px;
-    background: @light-gray;
-  }
-
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    content: "";
-    top: 18px;
-    left: -30px;
-    width: 30px;
-    height: 2px;
-    background: @basic-green;
-  }
-}
-
-.additionals__title::after {
-  @media (min-width: @tablet-width) {
-    position: absolute;
-    content: "";
-    top: 18px;
-    left: 400px;
-    min-width: 500px;
-    height: 2px;
-    background: @basic-green;
+    padding: 0 38px;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 1100px;
+    padding: 0;
+  }
+}
+
+.additionals__title::before {
+  position: absolute;
+  content: "";
+  top: 12px;
+  right: 0;
+  width: 100vw;
+  height: 2px;
+  background: @basic-green;
+  box-shadow: 100vw 0 0 @basic-green;
+
+  @media (min-width: @tablet-width) {
+    top: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 23px;
+  }
+}
+
+.additionals__title span {
+  position: relative;
+  display: block;
+  background-color: @white;
+  box-shadow: -40px 0 0 @white, 21px 0 0 @white;
+
+  @media (min-width: @tablet-width) {
+    width: 340px;
+    box-shadow: -35px 0 0 @white, 35px 0 0 @white;
   }
 }
 
 .additionals__list {
 
   @media (min-width: @tablet-width) {
-    padding: 0 30px;
   }
 
   @media (min-width: @desktop-width) {
@@ -89,7 +72,7 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -103,40 +86,58 @@
 }
 
 .additional {
-  margin-bottom: 30px;
+  margin-bottom: 17px;
   border-bottom: 1px solid @light-gray;
 
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 708px;
+    margin-bottom: 0;
+    padding: 26px 38px;
+    // margin-bottom: 27px;
+    border: 1px solid #CDCDCD;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 325px 325px 245px;
     margin: 0;
+    padding: 0;
     min-height: 70px;
     align-items: center;
-
+    width: 896px;
+    padding: 15px 0;
   }
 
 }
 
-/*не работает
-.additional:first-of-type::before {
-    position: absolute;
-    content: "";
-    top: -25px;
-    left: 0;
-    width: 100vw;
-    height: 1px;
-    background: @light-gray;
+.additional:not(:last-of-type) {
+  @media (min-width: @tablet-width) {
+    border-bottom: none;
+  }
 }
-*/
+
+.additional .order-button {
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+  }
+}
 
 .additional:last-child {
-  margin-bottom: 55px;
+  margin-bottom: 41px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 71px;
+  }
 
   @media (min-width: @desktop-width) {
     margin-bottom: 85px;
@@ -146,7 +147,7 @@
 .additional__content {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;

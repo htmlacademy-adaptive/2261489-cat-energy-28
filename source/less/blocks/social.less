@@ -1,16 +1,18 @@
 .social-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 40px 20px;
+  padding: 34px 20px;
   gap: 40px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 58px 30px;
   }
 
   @media (min-width: @desktop-width) {
+    padding: 72px 30px;
   }
 }
 
@@ -45,7 +47,8 @@
   }
 }
 
-.social__link:hover  {
+.social__link:hover,
+.social__link:focus {
   color: @basic-green;
 }
 

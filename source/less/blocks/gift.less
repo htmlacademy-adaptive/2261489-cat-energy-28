@@ -2,20 +2,23 @@
   position: relative;
   background: url("../img/gift-cat.png") no-repeat;
   height: 289px;
+  margin-bottom: 35px;
+  background-size: cover;
 
   @media (min-resolution: @retina) {
     background: url("../img/gift-cat@2x.png") no-repeat;
+    background-size: cover;
   }
 
   @media (min-width: @tablet-width) {
     height: 200px;
-    background-size: cover;
     background-position-y: -320px;
+    margin-bottom: 76px;
   }
 
   @media (min-width: @desktop-width) {
     width: 245px;
-    height: 298px;
+    height: 288px;
     background-position: -30px;
   }
 }
@@ -32,7 +35,7 @@
 
   @media (min-width: @tablet-width) {
     top: 57px;
-    left: 77px;
+    left: 82px;
     width: 80px;
     height: 82px;
   }
@@ -48,13 +51,10 @@
   background: rgba(104, 183, 56, 0.85) no-repeat;
 }
 
-.gift-wrapper {
-}
-
 .gift__title {
   position: relative;
   z-index: 1;
-  padding: 185px 60px 43px;
+  padding: 171px 60px 43px;
   text-align: center;
   font-size: 16px;
   line-height: 20px;
@@ -63,12 +63,12 @@
 
   @media (min-width: @tablet-width) {
     min-height: 60px;
-    padding: 70px 124px 69px 422px;
-    text-align-last: left;
+    padding: 55px 125px 69px 422px;
+    text-align: left;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 184px 40px 40px 40px;
+    padding: 168px 40px 40px;
     text-align: center;
   }
 }

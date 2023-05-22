@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: -6px;
 
   @media (min-width: @tablet-width) {
     width: 168px;
@@ -26,7 +27,8 @@
   }
 }
 
-.copyright:hover .html-academy-logo{
+.copyright:hover .html-academy-logo,
+.copyright:focus .html-academy-logo {
   color: @basic-green;
 }
 

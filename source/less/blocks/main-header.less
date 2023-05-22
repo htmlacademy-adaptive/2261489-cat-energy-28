@@ -2,18 +2,29 @@
   display: flex;
   flex-direction: column;
   min-height: 65px;
-  padding: 10px 20px 17px;
+  padding: 7px 20px 17px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     min-height: 54px;
     padding: 0 30px;
-    gap: 94px;
+    justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
     min-height: 59px;
-    gap: 540px;
     margin-top: 53px;
+  }
+}
+
+.cat-energy-logo-header {
+  @media (max-width: @mobile-only-width) {
+    width: 101px;
+    height: 19px;
+    color: @black;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }

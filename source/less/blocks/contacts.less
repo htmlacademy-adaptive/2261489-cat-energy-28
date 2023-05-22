@@ -1,29 +1,31 @@
 .contacts {
+  position: relative;
   background: @white;
 
   @media (min-width: @desktop-width) {
-    position: relative;
+    min-height: 400px;
+    padding-top: 95px;
   }
 }
 
 .contacts-block {
   position: relative;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   text-align: left;
   align-items: center;
   padding: 26px 0;
 
   @media (min-width: @tablet-width) {
-    gap: 295px;
-    padding: 56px 40px;
+    gap: 341px;
+    padding: 58px 40px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 95px;
     gap: 87px;
     width: 565px;
-    height: 198px;
-    padding: 56px 60px 56px 80px;
+    min-height: 198px;
+    padding: 55px 60px 56px 80px;
     background-color: @white;
     z-index: 1;
   }
@@ -39,7 +41,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 26px;
-    width: 170px;
+    width: 125px;
     text-align: left;
   }
 }
@@ -48,11 +50,20 @@
   text-align: left;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 160px;
+    min-height: 80px;
+    font-size: 16px;
+    line-height: 20px;
     text-align: right;
   }
 
   @media (min-width: @desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
     width: 175px;
     text-align: left;
   }
@@ -60,29 +71,39 @@
 
 .map {
   position: relative;
-  width: 320px;
+  width: 100%;
   height: 362px;
 
   @media (min-width: @tablet-width) {
-    width: 768px;
     height: 400px;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1280px;
-    top: -198px;
-    margin-bottom: -203px;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
-// не отрисовался псевдоэлемент
 
-// .map::after {
-//   position: absolute;
-//   content: "";
-//   top: 100px;
-//   left: 100px;
-//   width: 57px;
-//   height: 53px;
-//   background: url("../img/map-pin.png") no-repeat;
-// }
+.contacts::after {
+  position: absolute;
+  content: "";
+  top: 270px;
+  left: 105px;
+  width: 57px;
+  height: 53px;
+  background: url("../img/map-pin.png") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    top: 375px;
+    left: 300px;
+    width: 113px;
+    height: 105px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 225px;
+    left: 1100px;
+  }
+}

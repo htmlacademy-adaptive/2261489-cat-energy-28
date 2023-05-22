@@ -16,10 +16,11 @@
     width: 244px;
     font-size: 20px;
     line-height: 20px;
-    padding: 14px 26px;
+    padding: 10px 26px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @second-green;
   }
 
@@ -29,14 +30,17 @@
 }
 
 .button--secondary {
+  font-size: 16px;
+  line-height: 20px;
   background-color: @basic-gray;
   color: @dark-gray;
 
   @media (min-width: @tablet-width) {
-    width: 168px;
+    width: 250px;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #EBEBEB;
   }
 
@@ -46,10 +50,13 @@
 }
 
 .order-button {
-  margin-bottom: 19px;
+  min-height: 40px;
+  margin-bottom: 14px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 25px;
+    width: 100%;
+    font-size: 16px;
   }
 
   @media (min-width: @desktop-width) {
