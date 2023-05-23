@@ -1,7 +1,7 @@
 .main-navigation__list {
   display: flex;
   flex-wrap: wrap;
-  min-width: 320px;
+  min-width: 100%;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -180,17 +180,13 @@
   }
 }
 
-@media (max-width: @mobile-only-width) {
-  .main-navigation--closed .main-navigation__list {
-    display: none;
-  }
-}
-
-.main-navigation--nojs .main-navigation__list {
+.main-navigation--nojs .main-navigation--opened {
   @media (max-width: @mobile-only-width) {
     display: block;
+    position: static;
   }
-
 }
 
-
+.main-navigation--nojs .main-navigation__toggle {
+  display: none;
+}
