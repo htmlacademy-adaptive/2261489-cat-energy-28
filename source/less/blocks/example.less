@@ -249,6 +249,7 @@
   border: 2px solid @special-gray;
   border-radius: 2px;
   z-index: 2;
+  background-color: @special-gray;
 
   @media (min-width: @tablet-width) {
     height: 512px;
@@ -274,6 +275,20 @@
   border-radius: 50%;
   cursor: pointer;
   z-index: 2;
+  // mask-image: url("../img/slider-arrows.svg");
+  // mask-repeat: no-repeat;
+  // background-color: aqua;
+  // mask-position: 7px 10px;
+  // border: 2px solid @special-gray;
+  // border-radius: 50%;
+  // cursor: pointer;
+  // z-index: 2;
+}
+
+.range-slider:hover::before {
+  mask-image: url("../img/slider-arrows.svg");
+  background-color: @basic-green;
+  mask-size: 40px 40px;
 }
 
 .range-slider:hover,
