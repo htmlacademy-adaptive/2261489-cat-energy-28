@@ -1,8 +1,11 @@
 .features-wrapper {
-  width: 1280px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  @media (min-width: @desktop-width) {
+    width: 1280px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
 }
 
 .features__list {
