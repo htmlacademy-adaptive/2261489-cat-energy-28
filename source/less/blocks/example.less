@@ -2,11 +2,11 @@
   background: @basic-gray;
 
   @media (min-width: @tablet-width) {
-    background: linear-gradient(0deg, rgba(242,242,242,1) 43%, rgba(255,255,255,1) 43%);
+    background: linear-gradient(0deg, rgba(242, 242, 242, 1) 43%, rgba(255, 255, 255, 1) 43%);
   }
 
   @media (min-width: @desktop-width) {
-    background: linear-gradient(0deg, rgba(242,242,242,1) 77%, rgba(255,255,255,1) 77%);
+    background: linear-gradient(0deg, rgba(242, 242, 242, 1) 77%, rgba(255, 255, 255, 1) 77%);
   }
 }
 
@@ -73,7 +73,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    display: block
+    display: block;
   }
 }
 
@@ -83,14 +83,14 @@
   margin-bottom: 20px;
 
   @media (min-width: @tablet-width) {
-      gap: 42px;
-      margin-bottom: 100px;
-    }
+    gap: 42px;
+    margin-bottom: 100px;
+  }
 
   @media (min-width: @desktop-width) {
-      margin-bottom: 45px;
-    }
+    margin-bottom: 45px;
   }
+}
 
 .example__item {
   display: flex;
@@ -101,7 +101,6 @@
     width: 162px;
     gap: 11px;
   }
-
 }
 
 .example__number {
@@ -218,12 +217,12 @@
 
 .cat-before-image {
   position: absolute;
-  clip: rect(0px,140px,256px,0px);
+  clip: rect(0, 140px, 256px, 0);
 
   @media (min-width: @tablet-width) {
     left: 75px;
     top: 0;
-    clip: rect(0,280px,512px,0);
+    clip: rect(0, 280px, 512px, 0);
   }
 }
 
@@ -231,11 +230,11 @@
 .cat-after-image {
   position: absolute;
   left: 0;
-  clip: rect(0,256px,256px,140px);
+  clip: rect(0, 256px, 256px, 140px);
 
   @media (min-width: @tablet-width) {
     left: 75px;
-    clip: rect(0,512px,512px,280px);
+    clip: rect(0, 512px, 512px, 280px);
   }
 }
 
@@ -269,20 +268,12 @@
   left: -21px;
   width: 40px;
   height: 40px;
-  background: url(../img/slider-arrows.svg) white no-repeat;
+  background: url("../img/slider-arrows.svg") @white no-repeat;
   background-position: 7px 10px;
   border: 2px solid @special-gray;
   border-radius: 50%;
   cursor: pointer;
   z-index: 2;
-  // mask-image: url("../img/slider-arrows.svg");
-  // mask-repeat: no-repeat;
-  // background-color: aqua;
-  // mask-position: 7px 10px;
-  // border: 2px solid @special-gray;
-  // border-radius: 50%;
-  // cursor: pointer;
-  // z-index: 2;
 }
 
 .range-slider:hover::before {

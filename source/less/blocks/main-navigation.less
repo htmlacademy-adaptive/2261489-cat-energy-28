@@ -141,8 +141,8 @@
 }
 
 .main-navigation--opened .main-navigation__toggle {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     top: -54px;
@@ -152,11 +152,11 @@
     background-color: @black;
   }
 
-  &:before {
+  &::before {
     transform: rotate(45deg);
   }
 
-  &:after {
+  &::after {
     transform: rotate(-45deg);
   }
 }
@@ -168,8 +168,8 @@
 }
 
 .main-navigation--closed .main-navigation__toggle {
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
     top: 0;
